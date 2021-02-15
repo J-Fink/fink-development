@@ -14,6 +14,12 @@ const HeroStyles = styled.div`
     --misc: #FF9D00; //dark orange, used for equal sign
 
 
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.75em;
+    line-height: 1.25;
+    font-family: monospace;
+    white-space: pre;
     width: 100vw;
     height: 100vh;
     background-color: var(--blue);
@@ -22,38 +28,39 @@ const HeroStyles = styled.div`
 
     color: white;
     cursor: default;
-    .var-highlight{
-    color: #C0AD60;
+
+    
+    /* #gatsby-focus-wrapper .Typewriter .Typewriter__wrapper .var-highlight{
+        color: #C0AD60;
     }
-    .tag-highlight {
-    color: var(--tag-highlight);
-    }
+    #gatsby-focus-wrapper .Typewriter .Typewriter__wrapper .tag-highlight {
+        color: var(--tag-highlight);
+    } */
     .string {
         color: var(--string);
     }
+   
     .misc {
         color: var(--misc);
     }
     .attribute-name {
         color: var(--attribute-name);
+        font-style: italic;
     }
-
+    /* .attribute-name {
+        background-color: red;
+    } */
+    /* #printed-container span.attribute-name {
+        background-color: purple;
+    } */
    
 
- #pre {
-        margin: 0;
-        font-weight: bold;
-        font-size: 2.1em;
-        line-height: 1.25;
-        font-family: monospace;
-        white-space: pre;
-    }
-    .code {
+    /* .code {
         white-space: normal;
         text-indent: 150px;
-    }
+    } */
     .navigation:hover {
-        color: white;
+        background-color: purple;
     }
  
     `;
@@ -64,22 +71,22 @@ export default function Hero() {
     <HeroStyles>
         <Typewriter onInit = {(typewriter) => {
             typewriter.typeString(`
-            <span id="pre" className="code">
-                &lt;<span className="tag-highlight">ul </span><span className="attribute-name">id</span>=<span className="string">"menu"</span><span className="attribute-name">className</span>=<span className="string">"dropdown-menu"</span>&gt;
-                
-                    &lt;<span className="tag-highlight">li </span><span className="attribute-name">className</span>=<span className="string">"dropdown-content"</span>&lt;<span className="tag-highlight">a </span><span className="attribute-name">className</span>=<span className="string">"learn-more-link"</span><span className="attribute-name">href</span>=<span className="string">"#learn-more"</span>&gt;
-            </span>
+<span id="printed-container" class="code">
+    &lt;<span class="tag-highlight">ul </span><span class="attribute-name">id</span>=<span class="string">"menu"</span><span class="attribute-name">className</span>=<span class="string">"dropdown-menu"</span>&gt;
+        &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
+            &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"learn-more-link"</span><span class="attribute-name">href</span>=<span class="string">"#learn-more"</span>&gt;<span class="navigation">About</span>&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
+            &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"education-link"</span><span class="attribute-name">href</span>=<span class="string">"#education"</span>&gt;<span class="navigation">Education</span>&lt;/a&gt;
+        &lt;/li&gt;
+            &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
+            &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"technology-link"</span><span class="attribute-name">href</span>=<span class="string">"#technology"</span>&gt;<span class="navigation">Technologies</span>&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+</span>
             
         `).start();
         }} />
-        
-        <div>
-            <span id="pre" className="code">
-                &lt;<span className="tag-highlight">ul </span><span className="attribute-name">id</span>=<span className="string">"menu"</span><span className="attribute-name">className</span>=<span className="string">"dropdown-menu"</span>&gt;
-                
-                &lt;<span className="tag-highlight">li </span><span className="attribute-name">className</span>=<span className="string">"dropdown-content"</span>&lt;<span className="tag-highlight">a </span><span className="attribute-name">className</span>=<span className="string">"learn-more-link"</span><span className="attribute-name">href</span>=<span className="string">"#learn-more"</span>&gt;
-            </span>
-        </div>
     </HeroStyles> 
 
     
