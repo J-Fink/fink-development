@@ -6,15 +6,16 @@ import Typewriter from 'typewriter-effect';
 // import BackgroundImage from 'gatsby-background-image';
 
 const HeroStyles = styled.div`
-    --blue: #193549;
+    /* --blue: #193549;
     --tag-highlight: #9EFFFF; //baby blue
     --attribute-name:#FFC600; //orang-ish
     --string: #A5FF90; //lime green
     --source: #FFFFFF; //white
-    --misc: #FF9D00; //dark orange, used for equal sign
+    --misc: #FF9D00; //dark orange, used for equal sign */
 
 
     margin: 0;
+    margin-top: var(--header-height);
     font-weight: bold;
     font-size: 1.75em;
     line-height: 1.25;
@@ -23,8 +24,7 @@ const HeroStyles = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: var(--blue);
-    word-wrap: break-word;
-    white-space: pre;
+    white-space: pre-wrap;
 
     color: white;
     cursor: default;
@@ -70,7 +70,7 @@ export default function Hero() {
     return (
     <HeroStyles>
         <Typewriter onInit = {(typewriter) => {
-            typewriter.typeString(`
+            typewriter.changeDelay(35).typeString(`
 <span id="printed-container" class="code">
     &lt;<span class="tag-highlight">ul </span><span class="attribute-name">id</span>=<span class="string">"menu"</span><span class="attribute-name">className</span>=<span class="string">"dropdown-menu"</span>&gt;
         &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;

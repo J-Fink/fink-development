@@ -3,12 +3,14 @@ import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
 // import Img from 'gatsby-image';
 import Hero from '../components/Hero';
+import Toggle from '../components/Toggle';
 
 const HomePage = ({ data }) => {
   console.log(data);
   return (
     <Layout>
-      <Hero></Hero>
+      <Hero />
+      <Toggle />
       {/* <Img
       className="backgroundWorking"
       fixed={data.file.childImageSharp.fixed}

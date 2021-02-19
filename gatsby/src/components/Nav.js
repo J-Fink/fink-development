@@ -2,15 +2,16 @@ import React from 'react';
 // import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Logo from './Logo';
+import { Link } from 'gatsby';
 
 const NavStyles = styled.header`
     --line-height: 6.5vh;
-    --header-height: 7.5vh;
+    
     --nav-color:/* #0B5351; */ rgba(11, 83, 81, 0.85);
     --nav-hover-color: /*#00A9A5;*/rgb(0, 169, 165, 0.85);
     height: var(--header-height);
     position: fixed;
-    background-color: var(--nav-color);
+    background-color: var(--blue);
     text-align: center;
     top: 0;
     margin: 0;
@@ -40,14 +41,17 @@ const NavStyles = styled.header`
     }
     .dropdown-menu {
         top: var(--header-height);
-        display: inline-block;
+        display: flex;
+        justify-content: center;
         width: 100vw;
-        padding: 12px 0;
+        padding: 0;
         z-index: 1;
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
     }
     ul {
+        display: flex;
+        justify-content: center;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -55,27 +59,41 @@ const NavStyles = styled.header`
     li {
         width: auto;
     }
+
     .dropdown-content {
         text-decoration: none; 
-        display: inline-block; 
-        height: var(--line-height);
+        justify-content: space-around;
+        height: var(--header-height);
         line-height: var(--line-height);
+        /* margin-left: 15px;
+        margin-right: 15px; */
+        padding: 0px 16px;
+        
     }
     .dropdown-content a {
-        display: block;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
         height: var(--line-height);
+        text-align: center;
         text-decoration: none;
         color: white;
         cursor: pointer; 
-        margin-left: 1vw;
-        margin-right: 1vw;
+        /* padding-left: 1vw;
+        padding-right: 1vw; */
     }
     .dropdown-content:hover {
-        color: white;
-        background-color: var(--nav-hover-color);
+        /* color: purple; */
+        background-color: #214661;
         transition: all 0.25s ease-in-out;
         cursor: pointer;
     }
+    /* .dropdown-content:hover {
+        color: purple;
+        background-color: var(--string);
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+    } */
     .test-background {
         background-image: url("./background-working.JPG");
         height: 1000px;
@@ -102,14 +120,26 @@ export default function Nav() {
                     <div className="bar-3"></div>
                 </div>
                 <div className="logo-container">
-                    <a className="logo-link" href="https://www.joefink.dev/">
-                        <Logo></Logo>
-                    </a>
+                    <Link to="/">
+                        <Logo />
+                    </Link>
                 </div>
                 <div id="menu" className="dropdown-menu">
-                    <li className="dropdown-content"><a className="learn-more-link" href="#learn-more">About</a></li>
-                    <li className="dropdown-content"><a className="education-link" href="#education">Education</a></li>
-                    <li className="dropdown-content"><a className="technology-link" href="#technology">Technologies</a></li>
+                    <li className="dropdown-content">
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li className="dropdown-content">
+                        <Link to="/education">Education</Link>
+                    </li>
+                    <li className="dropdown-content">
+                        <Link to="/technologies">Technologies</Link>
+                    </li>
+                    <li className="dropdown-content">
+                        <Link to="/uses">Uses</Link>
+                    </li>
+                    <li className="dropdown-content">
+                        <Link to="/work">Work</Link>
+                    </li>
                 </div>
             </div>
         </ul>
