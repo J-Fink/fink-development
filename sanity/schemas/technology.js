@@ -2,7 +2,7 @@ import { GiCircuitry as icon } from 'react-icons/gi';
 
 export default {
     //computer name
-    name: 'technologies',
+    name: 'technology',
     //visible title
     title: 'Technologies',
     type: 'document',
@@ -10,9 +10,9 @@ export default {
     fields: [
         {
             name: 'name',
-            title: 'Technology Used',
+            title: 'Technology Name',
             type: 'string',
-            description: 'Description of technology',
+            description: 'What is the name of the technology?',
         },
     ]
 }
