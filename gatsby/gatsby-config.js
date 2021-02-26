@@ -1,5 +1,7 @@
 import dotenv from 'dotenv';
-dotenv.config({ path: '.env'})
+
+dotenv.config({ path: '.env' });
+
 export default {
   siteMetadata: {
     title: `Fink Development Site`,
@@ -7,7 +9,7 @@ export default {
     description: `Think Fink for Development`,
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-styled-components',
     {
       //this is the name of the plugin you are adding
       resolve: 'gatsby-source-sanity',
@@ -16,7 +18,7 @@ export default {
         dataset: 'production',
         watchMode: true,
         token: process.env.SANITY_TOKEN,
-      },
+      }
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
@@ -28,6 +30,6 @@ export default {
         path: "./src/assets/images/",
       },
       __key: "images",
-    },
-  ],
+    }
+  ]
 };
