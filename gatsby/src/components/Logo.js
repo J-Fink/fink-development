@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logoLight from '../assets/images/logo-light.svg';
-import logoDark from '../assets/images/logo-dark.svg';
+import logoHover from '../assets/images/logo-hover.svg';
 
 const LogoStyles = styled.div`
     background: url(${logoLight});
@@ -11,19 +11,14 @@ const LogoStyles = styled.div`
     width: 160px;
     margin-right: 3vw;
     margin-top: 5px;
+    transition: all 0.25s ease-in-out;
     :hover {
         height: 0px;
-        background-color: orange;
+        background: url(${logoHover});
+        background-repeat: no-repeat;
+        /* background-color: var(--nav-hover-color); */
     }
-    .logo {
-        height: 0px;
-        background-color: white;
-    }
-    .logo {
-        height: var(--header-height);
-        margin-right: 3vw;
-        margin-top: 5px;
-    }
+
 
 `;
 
