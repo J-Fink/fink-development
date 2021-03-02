@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-const ToggleStyles = styled.div`
-width: 60px;
+const ToggleStyles = styled.li`
+width: 120px;
 height: 34px;
 .toggle {
     position: absolute;
@@ -59,7 +59,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 `;
-export default function Toggle () {
+export default function Toggle() {
 return (
     <ToggleStyles>
         <label className="toggle">

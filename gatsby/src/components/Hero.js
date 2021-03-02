@@ -2,18 +2,11 @@ import React from 'react';
 // import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'gatsby';
 
 // import BackgroundImage from 'gatsby-background-image';
 
 const HeroStyles = styled.div`
-    /* --blue: #193549;
-    --tag-highlight: #9EFFFF; //baby blue
-    --attribute-name:#FFC600; //orang-ish
-    --string: #A5FF90; //lime green
-    --source: #FFFFFF; //white
-    --misc: #FF9D00; //dark orange, used for equal sign */
-
-
     margin: 0;
     margin-top: var(--header-height);
     font-weight: bold;
@@ -56,11 +49,11 @@ const HeroStyles = styled.div`
     `;
 
 export default function Hero() {
-        
+    console.log(Link);
     return (
     <HeroStyles>
         <Typewriter onInit = {(typewriter) => {
-            typewriter.changeDelay(35).typeString(`
+            typewriter.changeDelay(1).typeString(`
 <span id="printed-container" class="code">
     &lt;<span class="tag-highlight">ul </span><span class="attribute-name">id</span>=<span class="string">"menu"</span><span class="attribute-name">className</span>=<span class="string">"dropdown-menu"</span>&gt;
         &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
@@ -70,12 +63,12 @@ export default function Hero() {
             &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"education-link"</span><span class="attribute-name">href</span>=<span class="string">"#education"</span>&gt;<span class="navigation">Education</span>&lt;/a&gt;
         &lt;/li&gt;
             &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
-            &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"technology-link"</span><span class="attribute-name">href</span>=<span class="string">"#technology"</span>&gt;<span class="navigation">Technologies</span>&lt;/a&gt;
+            &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"technology-link"</span><span class="attribute-name">href</span>=<span class="string">"#technology"</span>&gt;<a href="/technologies" class="navigation">Technologies</a>&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 </span>
             
-        `).start().stop();
+        `).start();
         }} />
     </HeroStyles> 
 

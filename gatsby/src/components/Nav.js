@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { Link } from 'gatsby';
+import Toggle from './Toggle';
 
 const NavStyles = styled.header`
     --line-height: 6.5vh;
@@ -46,10 +47,6 @@ const NavStyles = styled.header`
         margin: 0;
         padding: 0;
     }
-    li {
-        width: auto;
-    }
-
     .dropdown-content {
         text-decoration: none; 
         justify-content: space-around;
@@ -96,38 +93,40 @@ const NavStyles = styled.header`
 export default function Nav() {
     return (
         <NavStyles className="header">
-        <ul className="menu-container">
-            <div className="flex-container">
-                <div className="bar-container">
-                    <div className="bar-1"></div>
-                    <div className="bar-2"></div>
-                    <div className="bar-3"></div>
+            {/* <Toggle /> */}
+            <ul className="menu-container">
+                <div className="flex-container">
+                    <div className="bar-container">
+                        <div className="bar-1"></div>
+                        <div className="bar-2"></div>
+                        <div className="bar-3"></div>
+                    </div>
+                    <Link to="/">
+                        <Logo />
+                    </Link>
+                    <div id="menu" className="dropdown-menu">
+                        <Toggle className="dropdown-content" />
+                        <li className="dropdown-content">
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li className="dropdown-content">
+                            <Link to="/education">Education</Link>
+                        </li>
+                        <li className="dropdown-content">
+                            <Link to="/technologies">Technologies</Link>
+                        </li>
+                        <li className="dropdown-content">
+                            <Link to="/uses">Uses</Link>
+                        </li>
+                        <li className="dropdown-content">
+                            <Link to="/work">Work</Link>
+                        </li>
+                    </div>
                 </div>
-                <Link to="/">
-                    <Logo />
-                </Link>
-                <div id="menu" className="dropdown-menu">
-                    <li className="dropdown-content">
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li className="dropdown-content">
-                        <Link to="/education">Education</Link>
-                    </li>
-                    <li className="dropdown-content">
-                        <Link to="/technologies">Technologies</Link>
-                    </li>
-                    <li className="dropdown-content">
-                        <Link to="/uses">Uses</Link>
-                    </li>
-                    <li className="dropdown-content">
-                        <Link to="/work">Work</Link>
-                    </li>
-                </div>
+            </ul>
+            <div>
+                
             </div>
-        </ul>
-        <div>
-            
-        </div>
         </NavStyles>
     )
 }
