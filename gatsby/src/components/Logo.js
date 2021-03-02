@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logoLight from '../assets/images/logo-light.svg';
 import logoHover from '../assets/images/logo-hover.svg';
 
+
 const LogoStyles = styled.div`
     background: url(${logoLight});
     background-repeat: no-repeat;

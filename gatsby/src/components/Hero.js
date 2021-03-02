@@ -25,7 +25,6 @@ const HeroStyles = styled.div`
     height: 100vh;
     background-color: var(--blue);
     white-space: pre-wrap;
-
     color: white;
     cursor: default;
 
@@ -36,6 +35,9 @@ const HeroStyles = styled.div`
     #gatsby-focus-wrapper .Typewriter .Typewriter__wrapper .tag-highlight {
         color: var(--tag-highlight);
     } */
+    .navigation {
+        transition: all 0.25s ease-in-out;
+    }
     .string {
         color: var(--string);
     }
@@ -47,20 +49,8 @@ const HeroStyles = styled.div`
         color: var(--attribute-name);
         font-style: italic;
     }
-    /* .attribute-name {
-        background-color: red;
-    } */
-    /* #printed-container span.attribute-name {
-        background-color: purple;
-    } */
-   
-
-    /* .code {
-        white-space: normal;
-        text-indent: 150px;
-    } */
     .navigation:hover {
-        background-color: purple;
+        background-color: var(--nav-hover-color);
     }
  
     `;
@@ -85,7 +75,7 @@ export default function Hero() {
     &lt;/ul&gt;
 </span>
             
-        `).start();
+        `).start().stop();
         }} />
     </HeroStyles> 
 

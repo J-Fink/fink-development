@@ -58,7 +58,7 @@ const NavStyles = styled.header`
         /* margin-left: 15px;
         margin-right: 15px; */
         padding: 0px 16px;
-        
+        transition: all 0.25s ease-in-out;
     }
     .dropdown-content a {
         width: 100%;
@@ -74,16 +74,10 @@ const NavStyles = styled.header`
     }
     .dropdown-content:hover {
         /* color: purple; */
-        background-color: #214661;
-        transition: all 0.25s ease-in-out;
+        background-color: var(--nav-hover-color);
         cursor: pointer;
     }
-    /* .dropdown-content:hover {
-        color: purple;
-        background-color: var(--string);
-        transition: all 0.25s ease-in-out;
-        cursor: pointer;
-    } */
+
     .test-background {
         background-image: url("./background-working.JPG");
         height: 1000px;
