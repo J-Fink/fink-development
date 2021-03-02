@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoLight from '../assets/images/logoLight.svg';
+import logoLight from '../assets/images/logo-light.svg';
+import logoDark from '../assets/images/logo-dark.svg';
 
 const LogoStyles = styled.div`
     background: url(${logoLight});
@@ -10,6 +11,10 @@ const LogoStyles = styled.div`
     width: 160px;
     margin-right: 3vw;
     margin-top: 5px;
+    .logo:hover {
+        background-color: purple;
+        background: url(${logoDark});
+    }
 
 `;
 
