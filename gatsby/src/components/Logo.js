@@ -7,13 +7,22 @@ const LogoStyles = styled.div`
     background: url(${logoLight});
     background-repeat: no-repeat;
     padding-top: 31.25%;
-    height: 75px;
+    height: 0px;
     width: 160px;
     margin-right: 3vw;
     margin-top: 5px;
-    .logo:hover {
-        background-color: purple;
-        background: url(${logoDark});
+    :hover {
+        height: 0px;
+        background-color: orange;
+    }
+    .logo {
+        height: 0px;
+        background-color: white;
+    }
+    .logo {
+        height: var(--header-height);
+        margin-right: 3vw;
+        margin-top: 5px;
     }
 
 `;
@@ -21,7 +30,6 @@ const LogoStyles = styled.div`
 export default function Logo() {
     return (
         <LogoStyles className="logo">
-            <div></div>
         </LogoStyles>
     )
 }

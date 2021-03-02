@@ -6,9 +6,6 @@ import { Link } from 'gatsby';
 
 const NavStyles = styled.header`
     --line-height: 6.5vh;
-    
-    --nav-color:/* #0B5351; */ rgba(11, 83, 81, 0.85);
-    --nav-hover-color: /*#00A9A5;*/rgb(0, 169, 165, 0.85);
     height: var(--header-height);
     position: fixed;
     background-color: var(--blue);
@@ -31,14 +28,7 @@ const NavStyles = styled.header`
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-    .logo {
-        height: var(--header-height);
-        margin-right: 3vw;
-        margin-top: 5px;
-    }
-    .logo-container {
-        margin-right: 0;
-    }
+
     .dropdown-menu {
         top: var(--header-height);
         display: flex;
@@ -119,11 +109,9 @@ export default function Nav() {
                     <div className="bar-2"></div>
                     <div className="bar-3"></div>
                 </div>
-                <div className="logo-container">
-                    <Link to="/">
-                        <Logo />
-                    </Link>
-                </div>
+                <Link to="/">
+                    <Logo />
+                </Link>
                 <div id="menu" className="dropdown-menu">
                     <li className="dropdown-content">
                         <Link to="/about">About</Link>
