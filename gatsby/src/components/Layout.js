@@ -1,16 +1,33 @@
 import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
-import Footer from './Footer';
+import Footer from './Footer.js';
 // import styled from 'styled-components';
 import Nav from './Nav';
-
-export default function Layout({ children }) {
+import styled from 'styled-components';
+const LayoutStyles = styled.div`
+    transition: all 1.75s ease-in-out;
+    .site {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        }
+    .site-content {
+        flex-grow: 1;
+    }
+`; 
+export default function Layout() {
     return (
         <>
-            <GlobalStyles />
-            <Nav />
-            {children}
-            <Footer />
+            <LayoutStyles>
+                <GlobalStyles />
+                {/* <div className="site"> */}
+                    <Nav />
+                    {/* <div className="site-content"> */}
+                        {/* {children} */}
+                    {/* </div> */}
+                    <Footer />
+                {/* </div> */}
+            </LayoutStyles>
         </>
     )
 }

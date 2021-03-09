@@ -7,15 +7,12 @@ import Hero from '../components/Hero';
 const HomePage = ({ data }) => {
   console.log(data);
   return (
-    <Layout>
-      <Hero />
-      {/* <Img
-      className="backgroundWorking"
-      fixed={data.file.childImageSharp.fixed}
-      alt=""
-      /> */}
-      <h1>Think Fink For Web Development</h1>
-    </Layout>
+    <>
+      <Layout>
+        <Hero />
+        <h1>Think Fink For Web Development</h1>
+      </Layout>
+    </>
   )
 }
 
