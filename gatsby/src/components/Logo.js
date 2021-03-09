@@ -5,6 +5,7 @@ import logoHover from '../assets/images/logo-hover.svg';
 
 
 const LogoStyles = styled.div`
+    background: url(${logoHover});
     background: url(${logoLight});
     background-repeat: no-repeat;
     padding-top: 31.25%;
