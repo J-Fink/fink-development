@@ -15,18 +15,19 @@ const LayoutStyles = styled.div`
         flex-grow: 1;
     }
 `; 
-export default function Layout() {
+export default function Layout({ children }) {
     return (
         <>
+            <GlobalStyles />
             <LayoutStyles>
-                <GlobalStyles />
-                {/* <div className="site"> */}
+                <div className="site">
                     <Nav />
-                    {/* <div className="site-content"> */}
-                        {/* {children} */}
-                    {/* </div> */}
+                    
+                    {children}
+                    <div className="site-content">
+                    </div>
                     <Footer />
-                {/* </div> */}
+                </div>
             </LayoutStyles>
         </>
     )
