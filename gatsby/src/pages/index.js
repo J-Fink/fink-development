@@ -1,30 +1,13 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { graphql } from 'gatsby';
-// import Img from 'gatsby-image';
+
 import Hero from '../components/Hero';
 
-const HomePage = ({ data }) => {
-  console.log(data);
+export default function HomePage() {
+  
   return (
     <>
-      <Layout>
-        <Hero />
-        <h1>Think Fink For Web Development</h1>
-      </Layout>
+      <Hero />
     </>
   )
 }
-
-export const query = graphql`
-query {
-  file(relativePath: { eq: "background-working.JPG"}) {
-    childImageSharp {
-      fixed(width: 125, height: 125) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-}
-`;
-export default HomePage;

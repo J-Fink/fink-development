@@ -14,8 +14,7 @@ export default function AboutPage() {
             <BasicPageStyles>
                 <AboutStyles>
                     Hello, my name is Joe!<br />
-                    I'm a husband and father, and I'm a self-taught web developer.<br />
-                    I also like keeping an open mind while I find a solution to a problem.
+                    I'm a husband, father, and a self-taught web developer.<br />
                 </AboutStyles>
             </BasicPageStyles>
         </>
