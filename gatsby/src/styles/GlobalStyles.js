@@ -10,7 +10,9 @@ const GlobalStyles = createGlobalStyle`
     --misc: #FF9D00; //dark orange, used for equal sign
     --header-height: 10vh;
     --nav-color:/* #0B5351; */ rgba(25, 53, 73, 0.85);
-    --nav-hover-color: /*#214661;*/rgba(33, 70, 97, 0.85)
+    --nav-hover-color: /*#214661;*/rgba(33, 70, 97, 0.85);
+    --transition-duration: 0.75s;
+    overflow-x: hidden;
     }
     body {
         margin: 0;

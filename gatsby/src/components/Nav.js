@@ -10,7 +10,7 @@ const Toggle = styled.div`
     height: 100%;
     cursor: pointer;
     padding: 0 10vw;
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
     @media (max-width: 768px) {
         display: flex;
     }
@@ -52,7 +52,7 @@ const Navbox = styled.div`
     height: 100%;
     justify-content: flex-end;
     align-items: center;
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -61,7 +61,7 @@ const Navbox = styled.div`
     justify-content: flex-start;
     padding-top: 10vh;
     background-color: var(--nav-hover-color);
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
     
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
@@ -116,23 +116,23 @@ const Navbox = styled.div`
 // `;
 const NavStyles = styled.header`
     --line-height: 6.5vh;
+    width: 100vw;
     height: var(--header-height);
     display: flex;
     background-color: var(--blue);
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     text-transform: uppercase;
     /* border-bottom: 2px solid red; */
     margin: 0 auto;
-    padding: 0 5vw;
     z-index: 2;
     align-self: center;
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
     /* transition: all 0.25s ease-in-out; */
     
   
     @media (max-width: 770px) {
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
         position: sticky;
         top: 0;
         left: 0;

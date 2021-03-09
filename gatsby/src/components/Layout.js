@@ -5,7 +5,7 @@ import Footer from './Footer.js';
 import Nav from './Nav';
 import styled from 'styled-components';
 const LayoutStyles = styled.div`
-    transition: all 1.75s ease-in-out;
+    transition: all var(--transition-duration) ease-in-out;
     .site {
         display: flex;
         min-height: 100vh;
