@@ -8,12 +8,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import work from './work.js';
 import technology from './technology.js';
 import siteSettings from './siteSettings.js';
+import blog from './blog.js';
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    work, technology, siteSettings
+    work, technology, siteSettings, blog
   ]),
 })
