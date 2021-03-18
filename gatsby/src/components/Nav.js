@@ -56,6 +56,8 @@ const Navbox = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
     position: fixed;
     width: 100%;
     justify-content: flex-start;
@@ -132,7 +134,8 @@ const NavStyles = styled.header`
     
   
     @media (max-width: 770px) {
-    transition: all var(--transition-duration) ease-in-out;
+        touch-action: none;
+        transition: all var(--transition-duration) ease-in-out;
         position: sticky;
         top: 0;
         left: 0;

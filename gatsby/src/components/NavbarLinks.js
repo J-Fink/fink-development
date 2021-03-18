@@ -45,6 +45,7 @@ export default function NavbarLinks() {
             <NavItem to="/technologies">Technologies</NavItem>
             <NavItem to="/uses">Uses</NavItem>
             <NavItem to="/work">Work</NavItem>
+            <NavItem to="/blog">Blog</NavItem>
         </>
 
     )
