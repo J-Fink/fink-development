@@ -12,7 +12,11 @@ const GlobalStyles = createGlobalStyle`
     --nav-color:/* #0B5351; */ rgba(25, 53, 73, 0.85);
     --nav-hover-color: /*#214661;*/rgba(33, 70, 97, 0.85);
     --transition-duration: 0.75s;
+    --nav-font-size: 1.75rem;
     overflow-x: hidden;
+    }
+    html {
+        font-size: 10px;
     }
     body {
         margin: 0;
