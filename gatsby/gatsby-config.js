@@ -30,6 +30,14 @@ export default {
         path: "./src/assets/images/",
       },
       __key: "images",
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    'gatsby-transformer-remark',
   ]
 };
