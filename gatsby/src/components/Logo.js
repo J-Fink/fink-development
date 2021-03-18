@@ -11,7 +11,7 @@ const LogoStyles = styled.div`
     padding-top: 31.25%;
     height: 0px;
     width: 160px;
-    margin-right: 3vw;
+    margin-left: 2vw;
     margin-top: 5px;
     transition: all 0.25s ease-in-out;
     :hover {

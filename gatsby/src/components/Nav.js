@@ -9,7 +9,8 @@ const Toggle = styled.div`
     display: none;
     height: 100%;
     cursor: pointer;
-    padding: 0 10vw;
+    /* padding: 0 10vw; */
+    margin-right: 2vw;
     transition: all var(--transition-duration) ease-in-out;
     @media (max-width: 768px) {
         display: flex;
@@ -48,6 +49,7 @@ const Hamburger = styled.div`
   }
 `;
 const Navbox = styled.div`
+    margin-right: 2vw;
     display: flex;
     height: 100%;
     justify-content: flex-end;
@@ -65,7 +67,7 @@ const Navbox = styled.div`
     background-color: var(--nav-hover-color);
     transition: all var(--transition-duration) ease-in-out;
     
-    top: 8vh;
+    top: var(--header-height);
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `;
