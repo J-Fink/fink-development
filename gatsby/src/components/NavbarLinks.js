@@ -23,16 +23,21 @@ const NavItem = styled(Link)`
     height: 1px;
     transition: all 0.25s ease-in-out;
   }
-    :hover {
-        color: var(--attribute-name);
-        ::after {
-            width: 100%;
-        }
+:hover {
+    color: var(--attribute-name);
+    ::after {
+        /* width: 100%; */
     }
-    
+}
+&[aria-current] {
+    color: var(--attribute-name);
+    ::after{
+        width: 100%;
+    }
+}    
     @media (max-width: 768px) {
         padding: 20px 0;
-        font-size: 1.5rem;
+        font-size: var(--nav-font-size);
         z-index: 6;
     }
 `;
