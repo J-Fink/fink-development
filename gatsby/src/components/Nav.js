@@ -10,7 +10,7 @@ const Toggle = styled.div`
     height: 100%;
     cursor: pointer;
     /* padding: 0 10vw; */
-    margin-right: 2vw;
+    margin-right: 20px;
     transition: all var(--transition-duration) ease-in-out;
     @media (max-width: 768px) {
         display: flex;
@@ -25,7 +25,9 @@ const Hamburger = styled.div`
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-
+  :hover {
+    color: var(--success-green);
+}
   ::before,
   ::after {
     width: 30px;
@@ -55,7 +57,6 @@ const Navbox = styled.div`
     height: 100%;
     justify-content: flex-end;
     align-items: center;
-    transition: all var(--transition-duration) ease-in-out;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -64,8 +65,8 @@ const Navbox = styled.div`
     position: fixed;
     width: 100%;
     justify-content: flex-start;
-    padding-top: 10vh;
-    background-color: var(--nav-hover-color);
+    /* padding-top: 10vh; */
+    background-color: grey; /*var(--nav-hover-color);*/ 
     transition: all var(--transition-duration) ease-in-out;
     
     top: var(--header-height);
@@ -75,8 +76,8 @@ const Navbox = styled.div`
 
 const NavStyles = styled.header`
     --line-height: 6.5vh;
-    width: 100vw;
-    height: var(--header-height);
+    width: 100%;
+    height: 64px; /*var(--header-height);*/
     display: flex;
     background-color: var(--blue);
     position: fixed;
@@ -86,13 +87,9 @@ const NavStyles = styled.header`
     margin: 0 auto;
     z-index: 2;
     align-self: center;
-    transition: all var(--transition-duration) ease-in-out;
-    /* transition: all 0.25s ease-in-out; */
     
-  
     @media (max-width: 770px) {
         touch-action: none;
-        transition: all var(--transition-duration) ease-in-out;
         position: sticky;
         top: 0;
         left: 0;

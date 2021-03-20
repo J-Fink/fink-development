@@ -8,7 +8,6 @@ const NavItem = styled(Link)`
     display: inline-block;
     white-space: nowrap;
     margin: 0 1vw;
-    transition: all 0.25s ease-in-out;
     position: relative;
     /* background-color: purple; */
     :after {
@@ -19,18 +18,14 @@ const NavItem = styled(Link)`
     width: 0%;
     content: "";
     color: transparent;
-    background: var(--attribute-name);
+    background: var(--success-green);
     height: 1px;
-    transition: all 0.25s ease-in-out;
   }
 :hover {
-    color: var(--attribute-name);
-    ::after {
-        /* width: 100%; */
-    }
+    color: var(--success-green);
 }
 &[aria-current] {
-    color: var(--attribute-name);
+    color: var(--success-green);
     ::after{
         width: 100%;
     }
