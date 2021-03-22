@@ -3,7 +3,7 @@ import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { Link } from 'gatsby';
-// import Toggle from './Toggle';
+import ThemeSelector from './ThemeSelector';
 
 const Toggle = styled.div`
     display: none;
@@ -96,27 +96,41 @@ const NavStyles = styled.header`
         right: 0;
         left: 0;
     }`;
+// function themeSelectorToggle() {
+//   console.log(`it's working`)
+// }
+
 
 export default function Nav() {
-    const [navOpen, setNavOpen] = useState(false);
-    console.log(setNavOpen.useState);
+  const [menuState, setMenuState] = useState(false);
+  // const [selectorToggleOn, setSelectorToggleOn] = useState(false);
+  // function openNav() {
+  //   setNavOpen(!navOpen);
+  //   console.log(`nav is open`);
+  //   }
+  //   function closeNav() {
+  //     setNavOpen(false);
+  //     console.log(`nav is closed`);
+  //   }
     return (
         <NavStyles >
             <Link to="/">
                 <Logo />
             </Link>
-            {/* <Toggle /> */}
-            <Toggle navOpen={navOpen} onClick={() => setNavOpen(!navOpen)}>
+            {/* <ThemeSelector selectorToggleOn={selectorToggleOn} onClick={() => setSelectorToggleOn(!selectorToggleOn)}>
+            {selectorToggleOn ? console.log(`selector is on`) : console.log(`selector is off`)}
+            </ThemeSelector>  */}
+            <Toggle /*navOpen={navOpen}*/ onClick={() => setMenuState(!menuState)}>
                 {/* below shows the hamburger bun or not */}
-                {navOpen ? <Hamburger open /> : <Hamburger />}
+                {menuState ? <Hamburger open /> : <Hamburger />}
             </Toggle>
-            {navOpen ? (
-                <Navbox navOpen={navOpen} onClick={() => setNavOpen(!navOpen)}>
-                    <NavbarLinks />
+            {menuState ? (
+                <Navbox menuState={menuState} /*onClick={() => closeNav()}*/>
+                    <NavbarLinks menuState={menuState} setMenuState={setMenuState} />
                 </Navbox>
             ) : (
-                <Navbox open>
-                    <NavbarLinks />
+                <Navbox open menuState={menuState} >
+                    <NavbarLinks menuState={menuState} setMenuState={setMenuState}/>
                 </Navbox>
             )}
         </NavStyles>

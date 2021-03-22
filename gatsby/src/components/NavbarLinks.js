@@ -36,17 +36,26 @@ const NavItem = styled(Link)`
         z-index: 6;
     }
 `;
-export default function NavbarLinks() {
+export default function NavbarLinks({ menuState, setMenuState}) {
+    let navLinks = [
+        {path:'/about',title:'About'},
+        {path:'/education',title:'Education'},
+        {path:'/technologies',title:'Technologies'},
+        {path:'/uses',title:'Uses'},
+        {path:'/work',title:'Work'},
+        {path:'/blog',title:'Blog'},
+    ]
+    const closeMenu = () => {
+        setMenuState(!menuState);
+    };
     return (
         <>
-            
-            <NavItem to="/about">About</NavItem>
-            <NavItem to="/education">Education</NavItem>
-            <NavItem to="/technologies">Technologies</NavItem>
-            <NavItem to="/uses">Uses</NavItem>
-            <NavItem to="/work">Work</NavItem>
-            <NavItem to="/blog">Blog</NavItem>
+        {navLinks.map((link, index) => {
+            return(
+                <NavItem onClick={() => closeMenu()} key={index} to={link.path}>{link.title}</NavItem>
+            )
+        })}
         </>
 
-    )
-}
+    );
+};
