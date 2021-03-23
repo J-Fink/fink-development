@@ -63,7 +63,7 @@ const HeroStyles = styled.div`
     `;
 
 export default function Hero() {
-    console.log(Link);
+    // console.log(Link);
     return (
     <HeroStyles>
         <Typewriter onInit = {(typewriter) => {

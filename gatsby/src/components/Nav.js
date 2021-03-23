@@ -3,7 +3,7 @@ import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { Link } from 'gatsby';
-import ThemeSelector from './ThemeSelector';
+
 
 const Toggle = styled.div`
     display: none;
@@ -103,33 +103,23 @@ const NavStyles = styled.header`
 
 export default function Nav() {
   const [menuState, setMenuState] = useState(false);
-  // const [selectorToggleOn, setSelectorToggleOn] = useState(false);
-  // function openNav() {
-  //   setNavOpen(!navOpen);
-  //   console.log(`nav is open`);
-  //   }
-  //   function closeNav() {
-  //     setNavOpen(false);
-  //     console.log(`nav is closed`);
-  //   }
+  
     return (
         <NavStyles >
             <Link to="/">
                 <Logo />
             </Link>
-            {/* <ThemeSelector selectorToggleOn={selectorToggleOn} onClick={() => setSelectorToggleOn(!selectorToggleOn)}>
-            {selectorToggleOn ? console.log(`selector is on`) : console.log(`selector is off`)}
-            </ThemeSelector>  */}
-            <Toggle /*navOpen={navOpen}*/ onClick={() => setMenuState(!menuState)}>
+           
+            <Toggle onClick={() => setMenuState(!menuState)}>
                 {/* below shows the hamburger bun or not */}
                 {menuState ? <Hamburger open /> : <Hamburger />}
             </Toggle>
             {menuState ? (
-                <Navbox menuState={menuState} /*onClick={() => closeNav()}*/>
+                <Navbox>
                     <NavbarLinks menuState={menuState} setMenuState={setMenuState} />
                 </Navbox>
             ) : (
-                <Navbox open menuState={menuState} >
+                <Navbox open  >
                     <NavbarLinks menuState={menuState} setMenuState={setMenuState}/>
                 </Navbox>
             )}
