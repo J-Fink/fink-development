@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 const ThemeSelectorStyles = styled.div`
-width: 120px;
+width: 39px;
 height: 34px;
 position: absolute;
 right: 20px;
@@ -56,18 +56,23 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
-  transform: translateX(15px);
+  
+  transform: translateX(29px); //distance is the length of line
 }
 .slider.round {
   border-radius: 18px;
   top: 12px;
-  left: 4px;
-  right: 0px;
+  left: -20px; //length of line determined by this and below
+  right: 21px; //length of line determined by this and above
   bottom: -14px;
+  transition: all 1s;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+.slider.round:hover::before {
+  background-color: purple;
 }
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {
