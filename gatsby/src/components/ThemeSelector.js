@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 const ThemeSelectorStyles = styled.div`
@@ -6,9 +6,7 @@ width: 120px;
 height: 34px;
 position: absolute;
 right: 20px;
-input:checked {
-  transform: rotate(-90deg);
-}
+transition: all 2.5s;
 .theme-selector {
     position: absolute;
     /* right: 10; */
@@ -74,13 +72,15 @@ input:checked + .slider:before {
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {
   const myRef = useRef(null);
-
+  useEffect(() => {
+    myRef.current.style.transform = `rotate(${rotateNumber}deg)`;
+  });
+  let rotateNumber = '0';
   const selectorOn = () => {
-    // myRef.style.transform = "rotate(-90deg)";
-    myRef.current.style.transform = "rotate(-90deg)";
+   rotateNumber = '-90';
   }
   const selectorOff = () => {
-    console.log(`selector is off!`);
+    rotateNumber = '0';
   }
   return (
     <ThemeSelectorStyles ref={myRef}>
