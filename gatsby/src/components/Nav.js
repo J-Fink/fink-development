@@ -106,7 +106,7 @@ export default function Nav() {
   
     return (
         <NavStyles >
-            <Link to="/" onClick={() => setMenuState(!menuState)}>
+            <Link to="/" onClick={() => menuState ? setMenuState(!menuState) : ''}>
                 <Logo />
             </Link>
            
