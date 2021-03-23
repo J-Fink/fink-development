@@ -8,5 +8,8 @@ const BasicPageStyles = styled.div`
         width: 30%;
         margin: auto;
     }
+    @media (max-width: 768px) {
+        margin-top: 0;
+    }
 `;
 export default BasicPageStyles;
