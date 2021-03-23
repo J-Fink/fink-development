@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 const ThemeSelectorStyles = styled.div`
@@ -73,14 +73,17 @@ input:checked + .slider:before {
 }
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {
+  const myRef = useRef(null);
+
   const selectorOn = () => {
-    console.log(`selector is on!`);
+    // myRef.style.transform = "rotate(-90deg)";
+    myRef.current.style.transform = "rotate(-90deg)";
   }
   const selectorOff = () => {
     console.log(`selector is off!`);
   }
   return (
-    <ThemeSelectorStyles>
+    <ThemeSelectorStyles ref={myRef}>
         <label className="theme-selector">
             <input type="checkbox" />
             <span className="slider round" onClick={() => setThemeSelectorState(!themeSelectorState)}>
