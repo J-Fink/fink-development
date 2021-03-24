@@ -9,7 +9,7 @@ export const COLORS = {
     },
     navTextHoverColor: {
       light: 'grey', // white
-      dark: 'success-green', // navy navy blue
+      dark: 'green', // navy navy blue
     },
     navFooterColor: {
       light: 'grey', // white
@@ -44,9 +44,13 @@ export const COLORS = {
       light: 'black',
       dark: 'white',
     },
-    gray700: {
-      light: 'hsl(0deg, 0%, 30%)',
-      dark: 'hsl(0deg, 0%, 70%)',
+    heroBoxShadowColor: {
+      light: 'var(--successGreen)',
+      dark: 'rgba(58, 217, 0, 1)',
+    },
+    successGreen: {
+      light: 'rgba(58, 217, 0, 1)',
+      dark: 'rgba(58, 217, 0, 1)',
     },
   };
   

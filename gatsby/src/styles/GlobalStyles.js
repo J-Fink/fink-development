@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --source: #FFFFFF; //white
     --misc: #FF9D00; //dark orange, used for equal sign
     --transition-duration: 0.75s;
-    --success-green: #3ad900;
+    --success-green: var(--successGreen);
     --footer-height: 64px;
     --nav-box-background-color: var(--navBoxBackgroundColor);
     --background-color: var(--backgroundColor);

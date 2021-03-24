@@ -85,7 +85,7 @@ const NavStyles = styled.header`
     text-transform: uppercase;
     
     margin: 0 auto;
-    z-index: 2;
+    z-index: 3;
     align-self: center;
     
     @media (max-width: 770px) {

@@ -19,7 +19,34 @@ const HeroStyles = styled.div`
     white-space: pre-wrap;
     color: white;
     cursor: default;
-
+    text-align: center;
+    
+    //stand for screen
+    .monitor-stand:before {
+        content: "";
+        display:inline-block;
+        position:relative;
+        background: #222;
+        width: 150px;
+        height: 50px;
+        top:399px;
+        
+    }
+    .monitor-stand:after {
+        content:"";
+        display:inline-block;
+        position:relative;
+        background:#333;
+        border-top-left-radius:.5em;
+        border-top-right-radius:.5em;
+        width: 300px;
+        height: 15px;
+        top: 42px;
+    }
+    .monitor {
+        position: relative;
+        z-index: 2;
+    }
     @media (max-width: 768px) {
         margin-top: 0;
     }
@@ -32,9 +59,36 @@ const HeroStyles = styled.div`
         font-size: 1em;
         white-space: break-spaces;
     }
+    .Typewriter {
+        /* border: 1px solid var(--navColor);
+        border-radius: 12px; */
+        //below is test for computer screen look
+        /* width: 50vw;
+        height: 50vh; */
+        width: 64vw;
+        height: 36vh;
+        border: 1em solid #333;
+        border-radius: 0.5em;
+        overflow-y: scroll;
+
+        margin-top: 5vh;
+        display: inline-block;
+        box-shadow: 0px 0px 10px -2px var(--heroBoxShadowColor);
+    }
+    .Typewriter::-webkit-scrollbar {
+        width: 15px;
+    }
+    .Typewriter::-webkit-scrollbar-thumb {
+        background: #000;
+    }
+
+
     .Typewriter__wrapper {
         width: 50vw;
     }
+    /* #printed-container {
+        border: 1px solid white;
+    } */
     
     /* #gatsby-focus-wrapper .Typewriter .Typewriter__wrapper .var-highlight{
         color: #C0AD60;
@@ -66,6 +120,8 @@ export default function Hero() {
     // console.log(Link);
     return (
     <HeroStyles>
+        <div className="monitor-stand">
+            <div className="monitor">
         <Typewriter onInit = {(typewriter) => {
             typewriter.changeDelay(1).typeString(`
 <span id="printed-container" class="code">
@@ -84,6 +140,8 @@ export default function Hero() {
             
         `).start();
         }} />
+            </div>
+        </div>
     </HeroStyles> 
 
     
