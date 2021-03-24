@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     :root {
-    --blue: #193549;
+    --blue: rgba(25, 53, 73, 1); //#193549; 
     --tag-highlight: #9EFFFF; //baby blue
     --attribute-name:#FFC600; //orange-ish
     --string: #A5FF90; //lime green
@@ -16,6 +16,17 @@ const GlobalStyles = createGlobalStyle`
     --success-green: #3ad900;
     --footer-color: var(--blue);
     --footer-height: 64px;
+    --nav-box-background-color: grey;
+    
+    //Dev Theme
+    --dev-theme-footer-color: rgba(25, 53, 73, 1);
+    --dev-theme-nav-color: rgba(25, 53, 73, 0.85);
+    --dev-theme-nav-hover-color: rgba(33, 70, 97, 0.85);
+    --dev-theme-footer-height: 64px;
+    --dev-theme-header-height: 64px;
+    --dev-nav-box-background-color: rgba(33, 70, 97, 1); //possibly 0.85
+    //Light Theme
+    --light-theme-footer-color: white;
     overflow-x: hidden;
     }
     html {
@@ -24,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
         margin: 0;
+        background: var(--color-background);
+        color: var(--color-text);
     }
 `;
 export default GlobalStyles;

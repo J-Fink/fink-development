@@ -3,6 +3,8 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Footer from './Footer.js';
 // import styled from 'styled-components';
 import Nav from './Nav';
+import { ThemeProvider } from './ThemeContext';
+
 import styled from 'styled-components';
 const LayoutStyles = styled.div`
     transition: all var(--transition-duration) ease-in-out;
@@ -17,7 +19,7 @@ const LayoutStyles = styled.div`
 `; 
 export default function Layout({ children }) {
     return (
-        <>
+        <ThemeProvider>
             <GlobalStyles />
             <LayoutStyles>
                 <div className="site">
@@ -29,6 +31,6 @@ export default function Layout({ children }) {
                     <Footer />
                 </div>
             </LayoutStyles>
-        </>
+        </ThemeProvider>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-
+import { ThemeContext } from './ThemeContext';
 const ThemeSelectorStyles = styled.div`
 width: 39px;
 height: 34px;
@@ -76,6 +76,10 @@ input:checked + .slider:before {
 }
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {
+  const { colorMode, setColorMode } = React.useContext(ThemeContext);
+  // if (!colorMode) {
+  //   return null;
+  // }
   const myRef = useRef(null);
   useEffect(() => {
     myRef.current.style.transform = `rotate(${rotateNumber}deg)`;
@@ -90,7 +94,7 @@ export default function ThemeSelector({ themeSelectorState, setThemeSelectorStat
   return (
     <ThemeSelectorStyles ref={myRef}>
         <label className="theme-selector">
-            <input type="checkbox" />
+            <input type="checkbox" checked={colorMode === 'dark'} onChange={ev => { setColorMode(ev.target.checked ? 'dark' : 'light');}} />
             <span className="slider round" onClick={() => setThemeSelectorState(!themeSelectorState)}>
       {themeSelectorState ? selectorOn() : selectorOff()}
 

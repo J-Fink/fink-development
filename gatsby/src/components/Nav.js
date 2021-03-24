@@ -66,7 +66,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     /* padding-top: 10vh; */
-    background-color: grey; /*var(--nav-hover-color);*/ 
+    background-color: var(--nav-box-background-color); /*var(--nav-hover-color);*/ 
     transition: all var(--transition-duration) ease-in-out;
     
     top: var(--header-height);
