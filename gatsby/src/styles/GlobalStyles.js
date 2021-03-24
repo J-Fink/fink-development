@@ -2,21 +2,25 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     :root {
+    --nav-color: var(--navColor);
+    --nav-hover-color: var(--navHoverColor)/*#214661;*/;
+    --nav-text-hover-color: var(--navTextHoverColor)/*#214661;*/;
+    --footer-color: var(--navFooterColor);
+    --header-height: var(--headerHeight);
+    --footer-height: var(--footerHeight);
+    --nav-font-size: 1.75rem /*var(--navFontSize)*/;
     --blue: rgba(25, 53, 73, 1); //#193549; 
     --tag-highlight: #9EFFFF; //baby blue
     --attribute-name:#FFC600; //orange-ish
     --string: #A5FF90; //lime green
     --source: #FFFFFF; //white
     --misc: #FF9D00; //dark orange, used for equal sign
-    --header-height: 64px;
-    --nav-color:/* #0B5351; */ rgba(25, 53, 73, 0.85);
-    --nav-hover-color: /*#214661;*/rgba(33, 70, 97, 0.85);
     --transition-duration: 0.75s;
-    --nav-font-size: 1.75rem;
     --success-green: #3ad900;
-    --footer-color: var(--blue);
     --footer-height: 64px;
-    --nav-box-background-color: grey;
+    --nav-box-background-color: var(--navBoxBackgroundColor);
+    --background-color: var(--backgroundColor);
+    --text-color: var(--textColor);
     
     //Dev Theme
     --dev-theme-footer-color: rgba(25, 53, 73, 1);
@@ -31,12 +35,12 @@ const GlobalStyles = createGlobalStyle`
     }
     html {
         font-size: 10px;
-        font-family: monospace;
+        font-family: var(--fontFamily);
     }
     body {
         margin: 0;
-        background: var(--color-background);
-        color: var(--color-text);
+        background: var(--background-color);
+        color: var(--textColor);
     }
 `;
 export default GlobalStyles;

@@ -1,28 +1,48 @@
 export const COLORS = {
-    text: {
-      light: 'hsl(0deg, 0%, 10%)', // white
-      dark: 'hsl(0deg, 0%, 100%)', // near-black
+    navColor: {
+      light: 'grey', // white
+      dark: 'rgba(25, 53, 73, 1)'/*'rgba(25, 53, 73, 0.85)'*/, // near-black
     },
-    background: {
-      light: 'hsl(0deg, 0%, 100%)', // white
-      dark: 'hsl(250deg, 70%, 7%)', // navy navy blue
+    navHoverColor: {
+      light: 'grey', // white
+      dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
     },
-    primary: {
-      light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
-      dark: 'hsl(50deg, 100%, 50%)', // Yellow
+    navTextHoverColor: {
+      light: 'grey', // white
+      dark: 'success-green', // navy navy blue
     },
-    secondary: {
-      light: 'hsl(250deg, 100%, 50%)', // Purplish-blue
-      dark: 'hsl(190deg, 100%, 40%)', // Cyan
+    navFooterColor: {
+      light: 'grey', // white
+      dark: 'rgba(25, 53, 73, 1)', // navy navy blue
+    },
+    headerHeight: {
+      light: '64px', // Pinkish-red
+      dark: '64px', // Yellow
+    },
+    footerHeight: {
+      light: '64px', // Pinkish-red
+      dark: '64px', // Yellow
+    },
+    navFontSize: {
+      light: '1.75rem', // Purplish-blue
+      dark: '1.75rem', // Cyan
+    },
+    navBoxBackgroundColor: {
+      light: 'grey', // Purplish-blue
+      dark: 'rgba(33, 70, 97, 1)', // Cyan
+    },
+    fontFamily: {
+      light: 'cursive', // Purplish-blue
+      dark: 'monospace', // Cyan
     },
     // Grays, scaling from least-noticeable to most-noticeable
-    gray300: {
-      light: 'hsl(0deg, 0%, 70%)',
-      dark: 'hsl(0deg, 0%, 30%)',
+    backgroundColor: {
+      light: 'white',
+      dark: 'black',
     },
-    gray500: {
-      light: 'hsl(0deg, 0%, 50%)',
-      dark: 'hsl(0deg, 0%, 50%)',
+    textColor: {
+      light: 'black',
+      dark: 'white',
     },
     gray700: {
       light: 'hsl(0deg, 0%, 30%)',

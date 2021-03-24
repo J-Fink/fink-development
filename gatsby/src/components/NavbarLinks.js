@@ -22,7 +22,7 @@ const NavItem = styled(Link)`
     height: 1px;
   }
 :hover {
-    color: var(--success-green);
+    color: var(--nav-text-hover-color);
 }
 &[aria-current] {
     color: var(--success-green);
