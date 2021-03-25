@@ -17,13 +17,15 @@ function setColorsByTheme() {
     const mql = window.matchMedia('(prefers-color-scheme: dark)');
     const prefersDarkFromMQ = mql.matches;
     const persistedPreference = localStorage.getItem(colorModeKey);
-  
+    console.log(persistedPreference);
     let colorMode = 'light';
   
     const hasUsedToggle = typeof persistedPreference === 'string';
-  
-    if (hasUsedToggle) {
+    console.log(hasUsedToggle);
+
+    if (hasUsedToggle === true) {
       colorMode = persistedPreference;
+      console.log(colorMode);
     } else {
       colorMode = prefersDarkFromMQ ? 'dark' : 'light';
     }
@@ -31,9 +33,9 @@ function setColorsByTheme() {
     let root = document.documentElement;
   
     root.style.setProperty(colorModeCssProp, colorMode);
-  
+    console.log(colorMode);
     Object.entries(colors).forEach(([name, colorByTheme]) => {
-      const cssVarName = `--color-${name}`;
+      const cssVarName = `--${name}`;
   
       root.style.setProperty(cssVarName, colorByTheme[colorMode]);
     });

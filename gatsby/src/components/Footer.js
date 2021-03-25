@@ -15,7 +15,7 @@ export default function Footer() {
     const [themeSelectorState, setThemeSelectorState] = useState(false);
     return (
     <FooterStyles>
-        <div>&copy; Joe Fink {new Date().getFullYear()}</div>
+        <div>&copy; Joe Fink 2019-{new Date().getFullYear()}</div>
         <ThemeSelector themeSelectorState={themeSelectorState} setThemeSelectorState={setThemeSelectorState} />
     </FooterStyles>
     )
