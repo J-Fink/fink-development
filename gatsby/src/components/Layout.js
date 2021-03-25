@@ -1,11 +1,10 @@
 import React from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
 import Footer from './Footer.js';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 import Nav from './Nav';
 import { ThemeProvider } from './ThemeContext';
-
-import styled from 'styled-components';
+import '@fontsource/roboto';
 const LayoutStyles = styled.div`
     transition: all var(--transition-duration) ease-in-out;
     .site {

@@ -32,8 +32,8 @@ export const COLORS = {
       dark: 'rgba(33, 70, 97, 1)', // Cyan
     },
     fontFamily: {
-      light: 'cursive', // Purplish-blue
-      dark: 'monospace', // Cyan
+      light: 'Roboto, Sans-Serif', // roboto
+      dark: 'monospace', // 'monospace'
     },
     // Grays, scaling from least-noticeable to most-noticeable
     backgroundColor: {
