@@ -49,14 +49,12 @@ export default function NavbarLinks({ menuState, setMenuState}) {
         {path:'/work',title:'Work'},
         {path:'/blog',title:'Blog'},
     ]
-    const closeMenu = () => {
-        setMenuState(!menuState);
-    };
+
     return (
         <>
         {navLinks.map((link, index) => {
             return(
-                <NavItem onClick={() => closeMenu()} key={index} to={link.path}>{link.title}</NavItem>
+                <NavItem onClick={() => menuState ? setMenuState(!menuState) : ''} key={index} to={link.path}>{link.title}</NavItem>
             )
         })}
         </>
