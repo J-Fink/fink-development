@@ -9,7 +9,7 @@ const BasicPageStyles = styled.div`
         margin: auto;
     }
     @media (max-width: 768px) {
-        margin-top: 0;
+        /* margin-top: 0; */
     }
 `;
 export default BasicPageStyles;

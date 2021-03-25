@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
     html {
         font-size: 10px;
         font-family: var(--fontFamily);
+        overflow: scroll;
     }
     body {
         margin: 0;

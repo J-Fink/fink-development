@@ -25,7 +25,7 @@ const Hamburger = styled.div`
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-  
+
   ::before,
   ::after {
     width: 30px;
@@ -88,7 +88,7 @@ const NavStyles = styled.header`
     
     @media (max-width: 770px) {
         touch-action: none;
-        position: sticky;
+        /* position: sticky; */
         top: 0;
         left: 0;
         right: 0;

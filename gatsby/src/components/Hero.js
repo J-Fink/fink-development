@@ -20,53 +20,19 @@ const HeroStyles = styled.div`
     color: white;
     cursor: default;
     text-align: center;
-    
-    //stand for screen
-    .monitor-stand:before {
-        content: "";
-        display:inline-block;
-        position:relative;
-        background: #222;
-        width: 150px;
-        height: 50px;
-        top:594px;
-        
-    }
-    .monitor-stand:after {
-        content:"";
-        display:inline-block;
-        position:relative;
-        background:#333;
-        border-top-left-radius:.5em;
-        border-top-right-radius:.5em;
-        width: 300px;
-        height: 15px;
-        top: 42px;
-    }
-    .monitor {
-        position: relative;
-        z-index: 2;
-    }
-    @media (max-width: 768px) {
-        margin-top: 0;
-    }
-    @media(max-width: 590px) {
-        font-size: 1.5em;
-        white-space: pre-wrap;
-        /* margin-top: var(--header-height); */
-    }
-    @media(max-width: 320px) {
-        font-size: 1em;
-        white-space: break-spaces;
-    }
+    --typewriter-width: 888px;
+    --typewriter-height: 500px;
+    --monitor-stand-top: 628px;
+    --monitor-base-top: 42px;
+
     .Typewriter {
         /* border: 1px solid var(--navColor);
         border-radius: 12px; */
         //below is test for computer screen look
         /* width: 50vw;
         height: 50vh; */
-        width: 830px; //64vw; basing off of vw does work when the user's browser is odd shaped
-        height: 466.875px; //36vh;
+        width: var(--typewriter-width); //64vw; basing off of vw does work when the user's browser is odd shaped
+        height: var(--typewriter-height); //36vh;
         border: 1em solid #333;
         border-radius: 0.5em;
         overflow-y: scroll;
@@ -85,6 +51,68 @@ const HeroStyles = styled.div`
 
     .Typewriter__wrapper {
         width: 50vw;
+    }
+    
+    //stand for screen
+    .monitor-stand:before {
+        content: "";
+        display:inline-block;
+        position:relative;
+        background: #222;
+        width: 150px;
+        height: 50px;
+        top: var(--monitor-stand-top);
+        
+    }
+    .monitor-stand:after {
+        content:"";
+        display:inline-block;
+        position:relative;
+        background:#333;
+        border-top-left-radius:.5em;
+        border-top-right-radius:.5em;
+        width: 300px;
+        height: 15px;
+        top: var(--monitor-base-top);
+    }
+    .monitor {
+        position: relative;
+        z-index: 2;
+    }
+    @media (max-width: 1035px) {
+        margin-top: var(--header-height);
+        --typewriter-width: 605px; //keep 16:9 ratio
+        --typewriter-height: 340px;
+        --monitor-stand-top: 467px;
+        /* --monitor-base-top: 42px; */
+    }
+    @media(max-width: 768px) {
+        --typewriter-width: 300px; //keep 16:9 ratio
+        --typewriter-height: 169px;
+        font-size: 1.5em;
+        white-space: pre-wrap;
+        --monitor-stand-top: 292px;
+        /* --monitor-base-top: 42px; */
+        /* margin-top: var(--header-height); */
+    }
+    @media(max-width: 388px) {
+        --typewriter-width: 177px; //keep 16:9 ratio
+        --typewriter-height: 315px;
+        --monitor-stand-top: 364px;
+        font-size: 1em;
+        white-space: break-spaces;
+        .Typewriter {
+            overflow-x: hidden;
+        }
+        
+        .monitor-stand::after {
+            display: none;
+        }
+        .monitor-stand::before {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+        }
     }
     /* #printed-container {
         border: 1px solid white;
