@@ -3,13 +3,13 @@ export const COLORS = {
       light: 'grey', // white
       dark: 'rgba(25, 53, 73, 1)'/*'rgba(25, 53, 73, 0.85)'*/, // near-black
     },
-    navHoverColor: {
-      light: 'grey', // white
-      dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
-    },
+    // navHoverColor: {
+    //   light: 'blue', // white
+    //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
+    // },
     navTextHoverColor: {
-      light: 'grey', // white
-      dark: 'green', // navy navy blue
+      light: 'var(--attribute-name)', // white
+      dark: 'rgba(58, 217, 0, 1)', //successGreen
     },
     navFooterColor: {
       light: 'grey', // white
@@ -45,12 +45,16 @@ export const COLORS = {
       dark: 'white',
     },
     heroBoxShadowColor: {
-      light: 'var(--successGreen)',
+      light: 'rgba(58, 217, 0, 1)',
       dark: 'rgba(58, 217, 0, 1)',
     },
     successGreen: {
       light: 'rgba(58, 217, 0, 1)',
       dark: 'rgba(58, 217, 0, 1)',
+    },
+    navUnderlineWidth: {
+      light: '100%',
+      dark: '0%',
     },
   };
   

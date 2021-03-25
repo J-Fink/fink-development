@@ -46,7 +46,7 @@ input:checked + .slider {
   background-color: var(--attribute-name);//#2196F3;//change this color to match other blues
 }
 input:checked + .slider:before {
-  background-color: var(--success-green);//#2196F3;//change this color to match other blues
+  background-color: var(--successGreen);//#2196F3;//change this color to match other blues
 }
 
 input:focus + .slider {

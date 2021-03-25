@@ -18,14 +18,18 @@ const NavItem = styled(Link)`
     width: 0%;
     content: "";
     color: transparent;
-    background: var(--success-green);
+    background: var(--navTextHoverColor);
     height: 1px;
+    transition: all 0.25s ease-in-out;
   }
 :hover {
-    color: var(--nav-text-hover-color);
+    color: var(--navTextHoverColor);
+    ::after {
+        width: var(--navUnderlineWidth);
+    }
 }
 &[aria-current] {
-    color: var(--success-green);
+    color: var(--navTextHoverColor);
     ::after{
         width: 100%;
     }

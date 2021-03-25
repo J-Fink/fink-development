@@ -25,9 +25,7 @@ const Hamburger = styled.div`
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-  :hover {
-    color: var(--success-green);
-}
+  
   ::before,
   ::after {
     width: 30px;

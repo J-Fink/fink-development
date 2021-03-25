@@ -29,7 +29,7 @@ const HeroStyles = styled.div`
         background: #222;
         width: 150px;
         height: 50px;
-        top:399px;
+        top:594px;
         
     }
     .monitor-stand:after {
@@ -65,8 +65,8 @@ const HeroStyles = styled.div`
         //below is test for computer screen look
         /* width: 50vw;
         height: 50vh; */
-        width: 64vw;
-        height: 36vh;
+        width: 830px; //64vw; basing off of vw does work when the user's browser is odd shaped
+        height: 466.875px; //36vh;
         border: 1em solid #333;
         border-radius: 0.5em;
         overflow-y: scroll;
@@ -110,9 +110,9 @@ const HeroStyles = styled.div`
         color: var(--attribute-name);
         font-style: italic;
     }
-    .navigation:hover {
-        background-color: var(--nav-hover-color);
-    }
+    /* .navigation:hover {
+        background-color: var(--navHoverColor);
+    } */
  
     `;
 

@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     :root {
     --nav-color: var(--navColor);
-    --nav-hover-color: var(--navHoverColor)/*#214661;*/;
+    /* --nav-hover-color: var(--navHoverColor)#214661;; */
     --nav-text-hover-color: var(--navTextHoverColor)/*#214661;*/;
     --footer-color: var(--navFooterColor);
     --header-height: var(--headerHeight);
@@ -16,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
     --source: #FFFFFF; //white
     --misc: #FF9D00; //dark orange, used for equal sign
     --transition-duration: 0.75s;
-    --success-green: var(--successGreen);
     --footer-height: 64px;
     --nav-box-background-color: var(--navBoxBackgroundColor);
     --background-color: var(--backgroundColor);
