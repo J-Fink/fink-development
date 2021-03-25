@@ -6,7 +6,8 @@ width: 39px;
 height: 34px;
 position: absolute;
 right: 20px;
-transition: all 2.5s;
+transition: all 0.5s;
+transform: rotate(var(--themeSelectorRotate));
 .theme-selector {
     position: absolute;
     /* right: 10; */
@@ -81,22 +82,22 @@ export default function ThemeSelector({ themeSelectorState, setThemeSelectorStat
   //   return null;
   // }
   const myRef = useRef(null);
-  useEffect(() => {
-    myRef.current.style.transform = `rotate(${rotateNumber}deg)`;
-  });
-  let rotateNumber = '0';
-  const selectorOn = () => {
-   rotateNumber = '-90';
-  }
-  const selectorOff = () => {
-    rotateNumber = '0';
-  }
+  // useEffect(() => {
+  //   myRef.current.style.transform = `rotate(${rotateNumber}deg)`;
+  // });
+  // let rotateNumber = '0';
+  // const selectorOn = () => {
+  //  rotateNumber = '-90';
+  // }
+  // const selectorOff = () => {
+  //   rotateNumber = '0';
+  // }
   return (
     <ThemeSelectorStyles ref={myRef}>
         <label className="theme-selector">
             <input type="checkbox" checked={colorMode === 'dark'} onChange={ev => { setColorMode(ev.target.checked ? 'dark' : 'light');}} />
             <span className="slider round" onClick={() => setThemeSelectorState(!themeSelectorState)}>
-      {themeSelectorState ? selectorOn() : selectorOff()}
+      {/* {themeSelectorState ? selectorOn() : selectorOff()} */}
 
             </span>
         </label>

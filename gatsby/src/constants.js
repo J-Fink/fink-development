@@ -56,6 +56,10 @@ export const COLORS = {
       light: '100%',
       dark: '0%',
     },
+    themeSelectorRotate: {
+      light: '0deg',
+      dark: '-90deg',
+    },
   };
   
   export const COLOR_MODE_KEY = 'color-mode';
