@@ -8,12 +8,12 @@ export const COLORS = {
     //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
     // },
     heroBackground: {
-      light: 'radial-gradient(circle, rgb(255 255 255) 30%, #ffc60052 100%',/*'radial-gradient(circle, rgba(33,70,97,1) 0%, rgba(255,255,255, 1) 35%, rgba(58,217,0,0.5) 100%)'*/ // white
-      dark: 'rgba(25, 53, 73, 1)', //successGreen
+      light: 'radial-gradient(circle, rgb(255 255 255) 30%, #ffc60052 100%',//orange with white
+      dark: 'radial-gradient(circle farthest-side, var(--successGreen), rgb(25 53 73)'/*'radial-gradient(circle, var(--successGreen) 25%, rgb(25 53 73) 100%'*/, //
     },
     monitorBackgroundColor: {
-      light: 'rgba(25, 53, 73, 1)', // white
-      dark: 'rgba(25, 53, 73, 1)', //successGreen
+      light: 'rgba(25, 53, 73, 1)', // dark blue
+      dark: 'rgba(25, 53, 73, 1)', //dark blue
     },
     navTextHoverColor: {
       light: 'white', // white
@@ -36,12 +36,12 @@ export const COLORS = {
       dark: '64px', // Yellow
     },
     navFontSize: {
-      light: '1.75rem', // Purplish-blue
-      dark: '1.75rem', // Cyan
+      light: '1.75rem', // 
+      dark: '1.75rem', // 
     },
     navBoxBackgroundColor: {
-      light: '#ffc600', // Purplish-blue
-      dark: 'rgba(33, 70, 97, 1)', // Cyan
+      light: '#ffc600', // orange
+      dark: 'rgba(33, 70, 97, 1)', // lighter than Header
     },
     fontFamily: {
       light: 'Roboto, Sans-Serif', // roboto
@@ -57,7 +57,7 @@ export const COLORS = {
       dark: 'white',
     },
     heroBoxShadowColor: {
-      light: 'rgba(58, 217, 0, 1)',
+      light: 'rgba(58, 217, 0, 1)',//success green 58, 217, 0
       dark: 'rgba(58, 217, 0, 1)',
     },
     successGreen: {
