@@ -10,7 +10,7 @@ const HeroStyles = styled.div`
     margin: 0;
     margin-top: var(--headerHeight);
     font-weight: bold;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 1.25;
     font-family: monospace;
     width: 100vw;
@@ -36,11 +36,11 @@ const HeroStyles = styled.div`
         height: 50vh; */
         width: var(--typewriter-width); //64vw; basing off of vw does work when the user's browser is odd shaped
         height: var(--typewriter-height); //36vh;
-        border: 1em solid #333;
-        border-radius: 0.5em;
+        border: 17.5px solid #333;
+        border-radius: 8.75px;
         overflow-y: scroll;
 
-        margin-top: 5vh;
+        margin-top: 37.85px;
         display: inline-block;
         box-shadow: 0px 0px 10px -2px var(--heroBoxShadowColor);
     }
@@ -72,8 +72,8 @@ const HeroStyles = styled.div`
         display:inline-block;
         position:relative;
         background:#333;
-        border-top-left-radius:.5em;
-        border-top-right-radius:.5em;
+        border-top-left-radius: 8.75px;
+        border-top-right-radius: 8.75px;
         width: 300px;
         height: 15px;
         top: var(--monitor-base-top);
@@ -92,7 +92,7 @@ const HeroStyles = styled.div`
     @media(max-width: 768px) {
         --typewriter-width: 300px; //keep 16:9 ratio
         --typewriter-height: 169px;
-        font-size: 1.5em;
+        font-size: 1.5rem;
         white-space: pre-wrap;
         --monitor-stand-top: 292px;
         
@@ -102,7 +102,7 @@ const HeroStyles = styled.div`
         --typewriter-width: 177px; //keep 16:9 ratio
         --typewriter-height: 315px;
         --monitor-stand-top: 364px;
-        font-size: 1em;
+        font-size: 1rem;
         white-space: break-spaces;
         .Typewriter {
             overflow-x: hidden;
