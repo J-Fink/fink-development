@@ -50,7 +50,7 @@ const Hamburger = styled.div`
 `;
 const Navbox = styled.div`
     margin-right: 2vw;
-    font-size: var(--nav-font-size);
+    font-size: var(--navFontSize);
     display: flex;
     height: 100%;
     justify-content: flex-end;
@@ -64,10 +64,10 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     /* padding-top: 10vh; */
-    background-color: var(--nav-box-background-color); /*var(--nav-hover-color);*/ 
+    background-color: var(--navBoxBackgroundColor); /*var(--nav-hover-color);*/ 
     transition: all var(--transition-duration) ease-in-out;
     
-    top: var(--header-height);
+    top: varvar(--headerHeight);
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `;
@@ -75,7 +75,7 @@ const Navbox = styled.div`
 const NavStyles = styled.header`
     --line-height: 6.5vh;
     width: 100%;
-    height: 64px; /*var(--header-height);*/
+    height: var(--headerHeight);
     display: flex;
     background: var(--navColor);
     position: fixed;

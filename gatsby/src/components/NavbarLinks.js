@@ -36,7 +36,7 @@ const NavItem = styled(Link)`
 }    
     @media (max-width: 768px) {
         padding: 20px 0;
-        font-size: var(--nav-font-size);
+        font-size: var(--navFontSize);
         z-index: 6;
     }
 `;

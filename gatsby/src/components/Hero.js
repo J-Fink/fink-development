@@ -8,7 +8,7 @@ import { Link } from 'gatsby';
 
 const HeroStyles = styled.div`
     margin: 0;
-    margin-top: var(--header-height);
+    margin-top: var(--headerHeight);
     font-weight: bold;
     font-size: 1.75em;
     line-height: 1.25;
@@ -83,7 +83,7 @@ const HeroStyles = styled.div`
         z-index: 2;
     }
     @media (max-width: 1035px) {
-        margin-top: var(--header-height);
+        margin-top: var(--headerHeight);
         --typewriter-width: 605px; //keep 16:9 ratio
         --typewriter-height: 340px;
         --monitor-stand-top: 467px;
@@ -95,8 +95,8 @@ const HeroStyles = styled.div`
         font-size: 1.5em;
         white-space: pre-wrap;
         --monitor-stand-top: 292px;
-        /* --monitor-base-top: 42px; */
-        /* margin-top: var(--header-height); */
+        
+        
     }
     @media(max-width: 388px) {
         --typewriter-width: 177px; //keep 16:9 ratio

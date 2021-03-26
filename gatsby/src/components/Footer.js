@@ -9,7 +9,7 @@ const FooterStyles = styled.footer`
         background-color: var(--footerColor);
         font-size: 1.65rem;
         color: white;
-        height: var(--footer-height);
+        height: var(--footerHeight);
     `;
 export default function Footer() {
     const [themeSelectorState, setThemeSelectorState] = useState(false);
