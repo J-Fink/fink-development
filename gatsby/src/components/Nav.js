@@ -77,7 +77,7 @@ const NavStyles = styled.header`
     width: 100%;
     height: 64px; /*var(--header-height);*/
     display: flex;
-    background-color: var(--nav-color);
+    background: var(--navColor);
     position: fixed;
     justify-content: space-between;
     text-transform: uppercase;

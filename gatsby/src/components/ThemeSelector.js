@@ -6,7 +6,7 @@ width: 39px;
 height: 34px;
 position: absolute;
 right: 20px;
-transition: all 0.5s;
+transition: all 1s;
 transform: rotate(var(--themeSelectorRotate));
 .theme-selector {
     position: absolute;
@@ -28,9 +28,9 @@ transform: rotate(var(--themeSelectorRotate));
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    background-color: transparent;
+    /* -webkit-transition: .4s; */
+    /* transition: .4s; */
 }
 .slider:before {
     position: absolute;
@@ -39,20 +39,21 @@ transform: rotate(var(--themeSelectorRotate));
     width: 20px;/*20px;*/
     left: 3px;
     bottom: -7px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    background-color: var(--sliderBeforeColor);
+    box-shadow: var(--sliderBeforeBoxShadow);
+    /* -webkit-transition: .4s; */
+    /* transition: .4s; */
 }
 input:checked + .slider {
-  background-color: var(--attribute-name);//#2196F3;//change this color to match other blues
+  background-color: transparent;//#2196F3;//change this color to match other blues
 }
 input:checked + .slider:before {
-  background-color: var(--successGreen);//#2196F3;//change this color to match other blues
+  background-color: var(--sliderBeforeColor);//#2196F3;//change this color to match other blues
 }
 
-input:focus + .slider {
+/* input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
-}
+} */
 
 input:checked + .slider:before {
   -webkit-transform: translateX(15px);
@@ -66,14 +67,14 @@ input:checked + .slider:before {
   left: -20px; //length of line determined by this and below
   right: 21px; //length of line determined by this and above
   bottom: -14px;
-  transition: all 1s;
+  /* transition: all 1s; */
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
 .slider.round:hover::before {
-  background-color: purple;
+  background-color: var(--sliderBeforeColorHover);
 }
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {

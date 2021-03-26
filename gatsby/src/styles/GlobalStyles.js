@@ -2,10 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     :root {
-    --nav-color: var(--navColor);
     /* --nav-hover-color: var(--navHoverColor)#214661;; */
     --nav-text-hover-color: var(--navTextHoverColor)/*#214661;*/;
-    --footer-color: var(--navFooterColor);
     --header-height: var(--headerHeight);
     --footer-height: var(--footerHeight);
     --nav-font-size: 1.75rem /*var(--navFontSize)*/;
@@ -18,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
     --transition-duration: 0.75s;
     --footer-height: 64px;
     --nav-box-background-color: var(--navBoxBackgroundColor);
-    --background-color: var(--backgroundColor);
     --text-color: var(--textColor);
     
     //Dev Theme
@@ -39,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
     }
     body {
         margin: 0;
-        background: var(--background-color);
+        background: var(--backgroundColor);
         color: var(--textColor);
     }
 `;

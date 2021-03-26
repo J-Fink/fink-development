@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const NavItem = styled(Link)`
     text-decoration: none;
-    color: white;
+    color: var(--navTextColor);
     display: inline-block;
     white-space: nowrap;
     margin: 0 1vw;

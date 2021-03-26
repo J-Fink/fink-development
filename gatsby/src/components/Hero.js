@@ -15,7 +15,7 @@ const HeroStyles = styled.div`
     font-family: monospace;
     width: 100vw;
     height: 100vh;
-    background-color: var(--blue);
+    /* background-color: var(--blue); */
     white-space: pre-wrap;
     color: white;
     cursor: default;
@@ -24,8 +24,11 @@ const HeroStyles = styled.div`
     --typewriter-height: 500px;
     --monitor-stand-top: 628px;
     --monitor-base-top: 42px;
+    background: var(--heroBackground);
 
     .Typewriter {
+        background-color: var(--monitorBackgroundColor);
+        ;
         /* border: 1px solid var(--navColor);
         border-radius: 12px; */
         //below is test for computer screen look

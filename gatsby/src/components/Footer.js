@@ -6,7 +6,7 @@ const FooterStyles = styled.footer`
         text-align: center;
         bottom: 0;
         position: relative;
-        background-color: var(--footer-color);
+        background-color: var(--footerColor);
         font-size: 1.65rem;
         color: white;
         height: var(--footer-height);

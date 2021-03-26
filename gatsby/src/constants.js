@@ -1,18 +1,30 @@
 export const COLORS = {
     navColor: {
-      light: 'grey', // white
+      light: '#ffc600', // orange
       dark: 'rgba(25, 53, 73, 1)'/*'rgba(25, 53, 73, 0.85)'*/, // near-black
     },
     // navHoverColor: {
     //   light: 'blue', // white
     //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
     // },
+    heroBackground: {
+      light: 'radial-gradient(circle, rgb(255 255 255) 30%, #ffc60052 100%',/*'radial-gradient(circle, rgba(33,70,97,1) 0%, rgba(255,255,255, 1) 35%, rgba(58,217,0,0.5) 100%)'*/ // white
+      dark: 'rgba(25, 53, 73, 1)', //successGreen
+    },
+    monitorBackgroundColor: {
+      light: 'rgba(25, 53, 73, 1)', // white
+      dark: 'rgba(25, 53, 73, 1)', //successGreen
+    },
     navTextHoverColor: {
-      light: 'var(--attribute-name)', // white
+      light: 'white', // white
       dark: 'rgba(58, 217, 0, 1)', //successGreen
     },
-    navFooterColor: {
-      light: 'grey', // white
+    navTextColor: {
+      light: 'black', // white
+      dark: 'white', //white
+    },
+    footerColor: {
+      light: '#ffc600', // white
       dark: 'rgba(25, 53, 73, 1)', // navy navy blue
     },
     headerHeight: {
@@ -28,7 +40,7 @@ export const COLORS = {
       dark: '1.75rem', // Cyan
     },
     navBoxBackgroundColor: {
-      light: 'grey', // Purplish-blue
+      light: '#ffc600', // Purplish-blue
       dark: 'rgba(33, 70, 97, 1)', // Cyan
     },
     fontFamily: {
@@ -59,6 +71,18 @@ export const COLORS = {
     themeSelectorRotate: {
       light: '0deg',
       dark: '-90deg',
+    },
+    sliderBeforeColor: {
+      light: '#ffc600',
+      dark: 'white',
+    },
+    sliderBeforeColorHover: {
+      light: 'black',
+      dark: 'black',
+    },
+    sliderBeforeBoxShadow: {
+      light: '0 0 17px #000',
+      dark: '0 0 17px #fff',
     },
   };
   
