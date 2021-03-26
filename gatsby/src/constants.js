@@ -9,7 +9,7 @@ export const COLORS = {
     // },
     heroBackground: {
       light: 'radial-gradient(circle, rgb(255 255 255) 30%, #ffc60052 100%',//orange with white
-      dark: 'radial-gradient(circle farthest-side, var(--successGreen), rgb(25 53 73)'/*'radial-gradient(circle, var(--successGreen) 25%, rgb(25 53 73) 100%'*/, //
+      dark: 'radial-gradient(circle, rgb(58 217 0) 30%, rgb(25 53 73) 100%'/*'radial-gradient(circle farthest-side, var(--successGreen), rgb(25 53 73)'*/, //
     },
     monitorBackgroundColor: {
       light: 'rgba(25, 53, 73, 1)', // dark blue
