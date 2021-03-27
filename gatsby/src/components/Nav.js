@@ -7,12 +7,13 @@ import { Link } from 'gatsby';
 
 const Toggle = styled.div`
     display: none;
-    height: 100%;
+    height: 30px;//height of hamburger compiled
     cursor: pointer;
     /* padding: 0 10vw; */
     margin-right: 20px;
     transition: all var(--transition-duration) ease-in-out;
     @media (max-width: 768px) {
+    margin-top: 17px;//calc((var(--headerHeight) - 30px) * .5)px;//take height of header, subtract height of hamburger compiled, divide by 2
         display: flex;
     }
 `;
@@ -72,7 +73,6 @@ const Navbox = styled.div`
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `;
-
 const NavStyles = styled.header`
     --line-height: 6.5vh;
     width: 100%;
@@ -83,7 +83,7 @@ const NavStyles = styled.header`
     justify-content: space-between;
     text-transform: uppercase;
     
-    margin: 0 auto;
+    /* margin: 0 auto; */
     z-index: 3;
     align-self: center;
     
@@ -105,6 +105,8 @@ export default function Nav() {
   
     return (
         <NavStyles >
+          {/* <div className="nav__container">
+          </div> */}
             <Link to="/" onClick={() => menuState ? setMenuState(!menuState) : ''}>
                 <Logo />
             </Link>
