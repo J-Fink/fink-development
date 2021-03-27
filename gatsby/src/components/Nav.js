@@ -55,6 +55,7 @@ const Navbox = styled.div`
     height: 100%;
     justify-content: flex-end;
     align-items: center;
+    margin-top: var(--headerHeight);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -67,7 +68,7 @@ const Navbox = styled.div`
     background-color: var(--navBoxBackgroundColor); /*var(--nav-hover-color);*/ 
     transition: all var(--transition-duration) ease-in-out;
     
-    top: varvar(--headerHeight);
+    /* top: var(--headerHeight); */
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `;
@@ -87,12 +88,12 @@ const NavStyles = styled.header`
     align-self: center;
     
     @media (max-width: 770px) {
-        touch-action: none;
+        /* touch-action: none; */
         /* position: sticky; */
-        top: 0;
+        /* top: 0;
         left: 0;
         right: 0;
-        left: 0;
+        left: 0; */
     }`;
 // function themeSelectorToggle() {
 //   console.log(`it's working`)

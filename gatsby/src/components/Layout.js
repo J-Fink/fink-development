@@ -23,7 +23,6 @@ export default function Layout({ children }) {
             <LayoutStyles>
                 <div className="site">
                     <Nav />
-                    
                     {children}
                     <div className="site-content">
                     </div>
