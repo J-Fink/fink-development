@@ -2,6 +2,7 @@ import React from 'react';
 import BasicPageStyles from '../styles/BasicPageStyles';
 import SEO from '../components/SEO.js';
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const AboutStyles = styled.div`
     text-align: center;
@@ -12,6 +13,7 @@ export default function AboutPage() {
         <>
             <SEO />
             <BasicPageStyles>
+                <StaticImage src="../assets/images/joeHoldsCottonCandy.jpg"></StaticImage>
                 <AboutStyles>
                     Hello, my name is Joe!<br />
                     I'm a husband, father, and a self-taught web developer.<br />
