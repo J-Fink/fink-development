@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+
 const NavItem = styled(Link)`
     text-decoration: none;
     color: var(--navTextColor);
@@ -40,6 +41,19 @@ const NavItem = styled(Link)`
         z-index: 6;
     }
 `;
+const NavContainer = styled.div`
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+`;
+const MenuContainer = styled.div`
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+    flex-direction: column;
+
+    }
+`;
 export default function NavbarLinks({ menuState, setMenuState}) {
     let navLinks = [
         {path:'/about',title:'About'},
@@ -51,13 +65,15 @@ export default function NavbarLinks({ menuState, setMenuState}) {
     ]
 
     return (
-        <>
-        {navLinks.map((link, index) => {
-            return(
-                <NavItem onClick={() => menuState ? setMenuState(!menuState) : ''} key={index} to={link.path}>{link.title}</NavItem>
-            )
-        })}
-        </>
+        <NavContainer>
+            <MenuContainer>
+                {navLinks.map((link, index) => {
+                    return(
+                        <NavItem onClick={() => menuState ? setMenuState(!menuState) : ''} key={index} to={link.path}>{link.title}</NavItem>
+                    )
+                })}
+            </MenuContainer>
+        </NavContainer>
 
     );
 };

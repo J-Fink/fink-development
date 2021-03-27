@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavbarLinks from './NavbarLinks';
 import styled from 'styled-components';
 import Logo from './Logo';
@@ -102,7 +102,29 @@ const NavStyles = styled.header`
 
 export default function Nav() {
   const [menuState, setMenuState] = useState(false);
-  
+  useEffect(() => {
+    let root = document.documentElement;
+    let body = document.body;
+    if(menuState) {
+      root.style.setProperty('--htmlOverflow', 'hidden');
+      body.style.setProperty('--htmlOverflow', 'visible');
+      body.style.setProperty('--bodyHeight', '100%');
+      // Document.documentElement.classList.add('noscroll');
+      // document.html.classList.add('noscroll');
+    }
+    // document.html.classList.add('noscroll');
+    // document.html.classList.add('noscroll');
+    
+    return () => {
+        root.style.setProperty('--htmlOverflow', 'visible');
+        body.style.setProperty('--htmlOverflow', 'hidden');
+        body.style.setProperty('--bodyHeight', 'auto');
+        // document.body.classList.remove('noscroll');
+        // document.html.classList.remove('noscroll');
+        // document.html.classList.remove('noscroll');
+      };
+
+  }, [menuState])
     return (
         <NavStyles >
           {/* <div className="nav__container">

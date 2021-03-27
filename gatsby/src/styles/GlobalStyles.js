@@ -10,17 +10,31 @@ const GlobalStyles = createGlobalStyle`
     --source: #FFFFFF; //white
     --misc: #FF9D00; //dark orange, used for equal sign
     --transition-duration: 0.75s;
+    --htmlOverflow: visible;
+    --bodyOverflow: hidden;
+    --bodyHeight: auto;
     overflow-x: hidden;
     }
     html {
         font-size: 10px;
         font-family: var(--fontFamily);
-        overflow: scroll;
+        overflow: var(--htmlOverflow);
     }
     body {
         margin: 0;
         background: var(--backgroundColor);
         color: var(--textColor);
+    }
+    @media (max-width: 768px) {
+
+        html.noscroll {
+            overflow: hidden;
+        }
+        body.noscroll {
+            overflow: visible;
+            height: 100%
+        }
+
     }
 `;
 export default GlobalStyles;
