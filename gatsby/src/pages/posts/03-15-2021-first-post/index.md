@@ -1,6 +1,7 @@
 ---
 path: '/first-post'
 title: 'First Blog Post'
+summary: 'This is a post blah blah'
 ---
 
 Hello!!

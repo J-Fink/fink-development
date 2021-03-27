@@ -56,6 +56,10 @@ export const COLORS = {
       light: 'black',
       dark: 'white',
     },
+    textColorHover: {
+      light: '#ffc600',
+      dark: 'rgba(58, 217, 0, 1)',
+    },
     heroBoxShadowColor: {
       light: 'rgba(58, 217, 0, 1)',//success green 58, 217, 0
       dark: 'rgba(58, 217, 0, 1)',

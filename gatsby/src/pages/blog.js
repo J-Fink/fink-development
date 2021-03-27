@@ -4,25 +4,53 @@ import SEO from '../components/SEO.js';
 import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
 
+const BlogGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+`;
+
+const BlogGridItem = styled.div`
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-gap: 3rem;
+
+    a {
+        text-decoration: none;
+        color: var(--textColor);
+    }
+    a:hover {
+        color: var(--textColorHover);
+    }
+
+`;
 const BlogStyles = styled.div`
     text-align: center;
     
 `;
 export default function BlogPage({ data }) { 
+    console.log(data);
     return (
         <>
             <SEO />
             <BasicPageStyles>
                 <BlogStyles>
-                    <h2>Index</h2>
-                    {data.allMarkdownRemark.edges.map(post => {
-                        return (
-                        <Link 
-                        key={post.node.id}
-                        href={post.node.frontmatter.path}>
-                            {post.node.frontmatter.title}</Link>
-                        );
-                    })}
+                        <h2>Index</h2>
+                    <BlogGrid>
+                        {data.allMarkdownRemark.edges.map(post => {
+                            return (
+                            <BlogGridItem>
+                                <Link 
+                                key={post.node.id}
+                                to={post.node.frontmatter.path}>
+                                    {post.node.frontmatter.title}
+                                    </Link>
+                                    <div>
+                                        {post.node.frontmatter.summary}
+                                    </div>
+                            </BlogGridItem>
+                            );
+                        })}
+                    </BlogGrid>
                 </BlogStyles>
             </BasicPageStyles>
         </>
@@ -38,6 +66,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         title
                         path
+                        summary
                     }
                 }
             }
