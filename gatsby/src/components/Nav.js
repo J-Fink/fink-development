@@ -55,9 +55,9 @@ const Navbox = styled.div`
     height: 100%;
     justify-content: flex-end;
     align-items: center;
-    margin-top: var(--headerHeight);
 
   @media (max-width: 768px) {
+    margin-top: var(--headerHeight);
     flex-direction: column;
     height: 100vh;
     overflow-y: hidden;
