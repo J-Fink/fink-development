@@ -5,7 +5,8 @@ import ThemeSelector from './ThemeSelector';
 const FooterStyles = styled.footer`
         text-align: center;
         bottom: 0;
-        position: relative;
+        position: fixed;
+        width: 100%;
         background-color: var(--footerColor);
         font-size: 1.65rem;
         color: white;
