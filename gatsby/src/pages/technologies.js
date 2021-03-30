@@ -1,27 +1,55 @@
 import React from 'react';
 import BasicPageStyles from '../styles/BasicPageStyles';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+const TechnologiesGrid = styled.div`
+    display: grid;
+    grid-gap: 2rem;
+    /* g */
+`;
+const TechnologyStyles = styled.div`
+    .gatsby-image-wrapper {
+        /* height: 125px; */
+        width: 75px;
+    }
+`;
 
-export default function TechnologiesPage() {
+
+export default function TechnologiesPage({ data }) {
+    
+    console.log(data);
+    const technologies = data.allSanityTechnology.nodes;
+    console.log(technologies);
     return (
-        <BasicPageStyles>
-            
-        <section>
-            This is about Technology!!
-            List of Technologies:
-            <ul>
-                <li>MongoDB</li>
-                <li>GraphQL</li>
-                <li>Git &amp; GitHub</li>
-                <li>VS Code</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>Node</li>
-                <li>Gatsby</li>
-                <li>React</li>
-                <li>Drupal</li>
-            </ul>
-        </section>
-        </BasicPageStyles>
+        <>
+            <BasicPageStyles>
+                
+            <TechnologiesGrid>
+                {technologies.map((technology) => (
+                    <TechnologyStyles key={technology.id}>{technology.name}
+                        <Img fluid={technology.image.asset.fluid} />
+                    </TechnologyStyles>
+                ))}
+            </TechnologiesGrid>
+            </BasicPageStyles>
+        </>  
     )
 }
+
+export const query = graphql`
+    query {
+        allSanityTechnology {
+    nodes {
+      name
+      image {
+        asset {
+          fluid(maxWidth: 410) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+    }
+  }
+    }
+`;

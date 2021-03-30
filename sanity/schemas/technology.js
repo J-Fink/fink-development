@@ -14,5 +14,11 @@ export default {
             type: 'string',
             description: 'What is the name of the technology?',
         },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+        },
+       
     ]
 }
