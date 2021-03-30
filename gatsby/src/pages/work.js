@@ -1,7 +1,7 @@
 import React from 'react';
 import BasicPageStyles from '../styles/BasicPageStyles';
 
-export default function TechnologiesPage() {
+export default function WorkPage() {
     return (
         <BasicPageStyles>
             <section>
