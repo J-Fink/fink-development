@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ThemeSelector from './ThemeSelector';
-
+import SocialLinks from './SocialLinks';
 const FooterStyles = styled.footer`
         text-align: center;
         bottom: 0;
@@ -19,6 +19,7 @@ export default function Footer() {
     <FooterStyles>
         <div>&copy; Joe Fink 2019-{new Date().getFullYear()}</div>
         <ThemeSelector themeSelectorState={themeSelectorState} setThemeSelectorState={setThemeSelectorState} />
+        <SocialLinks />
     </FooterStyles>
     )
 }
