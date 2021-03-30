@@ -4,26 +4,52 @@ import SEO from '../components/SEO.js';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import { HeadingStyles } from '../components/Heading';
+import CottonCandyImg from '../assets/images/joeHoldsCottonCandy.jpg';
+
+
 
 const AboutStyles = styled.div`
     text-align: center;
+    /* --imageHeight: 400px;
+    --imageWidth: 400px; */
+    --avatarImgHeight: 400px;
+    --avatarImgWidth: 400px;
+    --avatarImgLeft: -58vw;
+    --introTop: -483px;
+    --introLeft: 145px;
+    --h1Top: -445px;
     .gatsby-image-wrapper {
+        height: var(--avatarImgHeight);
+        width: var(--avatarImgWidth);
         border-radius: 50%;
-        margin-top: 25px;
-        margin-left: 10vw;
-        /* border: 10px solid white; */
+        margin-top: 55px;
+        margin-left: var(--avatarImgLeft);
         overflow: hidden;
-        /* box-shadow: inset 12px 12px 12px 50px gold; */
-        /* box-shadow:  */
-        /* h1 {
-            margin-top: 15px;
-        } */
+
+    }
+    h1 {
+    position: relative;
+      top: var(--h1Top);
+      font-size: 9rem;
+    }
+    @media (max-width: 1315px) {
+        --avatarImgHeight: 215px;
+        --avatarImgWidth: 215px;
+        --introTop: -352px;
+        --h1Top: -287px;
+    }
+    @media (max-width: 800px) {
+        --introLeft: 1px;
+        --h1Top: -75px;
+        --avatarImgLeft: -26vw;
+        --introTop: -154px;
     }
     .intro {
         position: relative;
-        top: -483px;
-        left: 145px;
+        top: var(--introTop);
+        left: var(--introLeft);
     }
+  
 `;
 
 export default function AboutPage() { 
@@ -32,24 +58,23 @@ export default function AboutPage() {
             <SEO />
             <BasicPageStyles>
                 <AboutStyles>
-                <StaticImage
-                alt="Joe speaks into a microphone"
-                src="../assets/images/joeFromTheSide.jpg"
-                placeholder="traced SVG"
-                layout="fixed"
-                width={400}
-                height={400}
-                // css={`
-                /* border: 1px solid green; */
-                   /* border-radius: 100%;  */
-                // `}
-                />
-                <HeadingStyles>About</HeadingStyles>
-                    <p class="intro">
-                        Hi, I'm Joe!<br />
-                        I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota<br />
-
-                    </p>
+                    <StaticImage
+                        alt="Joe speaks into a microphone"
+                        src="../assets/images/joeFromTheSide.jpg"
+                        placeholder="traced SVG"
+                        // layout="fixed"
+                        width={400}
+                        height={400}
+                      
+                    />
+                    {/* <div> */}
+                    <h1>About</h1>
+                <div className="intro">
+                        <p>
+                            Hi, I'm Joe!<br />
+                            I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota<br />
+                        </p>
+                </div>
                     <h2>What I Do</h2>
                         <p>
                             I work for a church where I wear many hats. In my free time I make websites, and like to use my new found skills to help nonprofit organizations.
