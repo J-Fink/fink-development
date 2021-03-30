@@ -76,6 +76,14 @@ input:checked + .slider:before {
 .slider.round:hover::before {
   background-color: var(--sliderBeforeColorHover);
 }
+
+//this checks if hover is availabe (not available on mobile) if it is not then it won't change the color. There was an issue where you would click and the hover state would stay until you clicked somewhere else
+@media (hover: none) {
+.slider.round:hover::before {
+  background-color: var(--sliderBeforeColor);
+}
+
+}
 `;
 export default function ThemeSelector({ themeSelectorState, setThemeSelectorState }) {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);
