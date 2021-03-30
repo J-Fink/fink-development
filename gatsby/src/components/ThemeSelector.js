@@ -55,7 +55,7 @@ input:checked + .slider:before {
   box-shadow: 0 0 1px #2196F3;
 } */
 
-input:checked + .slider:before {
+.slider:before {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
   
