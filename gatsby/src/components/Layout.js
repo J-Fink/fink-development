@@ -11,6 +11,7 @@ const LayoutStyles = styled.div`
         display: flex;
         min-height: 100vh;
         flex-direction: column;
+        min-height: -webkit-fill-available; // fixes issue with bottom footer being hidden on mobile
         }
     .site-content {
         flex-grow: 1;
