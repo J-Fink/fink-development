@@ -18,6 +18,9 @@ const AboutStyles = styled.div`
     --introTop: -483px;
     --introLeft: 145px;
     --h1Top: -445px;
+    .test {
+        border-radius:50%;
+    }
     .gatsby-image-wrapper {
         height: var(--avatarImgHeight);
         width: var(--avatarImgWidth);
@@ -27,6 +30,9 @@ const AboutStyles = styled.div`
         overflow: hidden;
 
     }
+    /* img {
+        border-radius: 50%;
+    } */
     h1 {
     position: relative;
       top: var(--h1Top);
@@ -59,6 +65,7 @@ export default function AboutPage() {
             <BasicPageStyles>
                 <AboutStyles>
                     <StaticImage
+                        imgClassName="test" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
                         alt="Joe speaks into a microphone"
                         src="../assets/images/joeFromTheSide.jpg"
                         placeholder="traced SVG"
