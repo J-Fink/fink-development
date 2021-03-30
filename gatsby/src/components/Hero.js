@@ -22,7 +22,7 @@ const HeroStyles = styled.div`
     text-align: center;
     --typewriter-width: 888px;
     --typewriter-height: 500px;
-    --monitor-stand-top: 628px;
+    --monitor-stand-top: 590px;
     --monitor-base-top: 42px;
     background: var(--heroBackground);
 
@@ -40,7 +40,7 @@ const HeroStyles = styled.div`
         border-radius: 8.75px;
         overflow-y: scroll;
 
-        margin-top: 37.85px;
+        /* margin-top: 37.85px; */ //remove so it is higher on the page
         display: inline-block;
         box-shadow: 0px 0px 10px -2px var(--heroBoxShadowColor);
     }
@@ -86,7 +86,7 @@ const HeroStyles = styled.div`
         margin-top: var(--headerHeight);
         --typewriter-width: 605px; //keep 16:9 ratio
         --typewriter-height: 340px;
-        --monitor-stand-top: 467px;
+        --monitor-stand-top: 429px;
         /* --monitor-base-top: 42px; */
     }
     @media(max-width: 768px) {
@@ -94,14 +94,14 @@ const HeroStyles = styled.div`
         --typewriter-height: 169px;
         font-size: 1.5rem;
         white-space: pre-wrap;
-        --monitor-stand-top: 292px;
+        --monitor-stand-top: 254px;
         
         
     }
     @media(max-width: 388px) {
         --typewriter-width: 177px; //keep 16:9 ratio
         --typewriter-height: 315px;
-        --monitor-stand-top: 364px;
+        --monitor-stand-top: 326px;
         font-size: 1rem;
         white-space: break-spaces;
         .Typewriter {
