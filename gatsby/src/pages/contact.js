@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ContactPageStyles = styled.div`
     text-align: center;
     width: 50vw;
-    height: 50vh;
+    height: 65vh;
     background-color: rgba(226, 226, 226, 0.5);
     border-radius: 5px;
     margin: auto;
