@@ -2,10 +2,11 @@ import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { ThemeContext } from './ThemeContext';
 const ThemeSelectorStyles = styled.div`
-width: 39px;
-height: 34px;
+width: 40px;
+height: 40px;
 position: absolute;
-right: 20px;
+right: 25px;
+bottom: 8px;
 transition: all 1s;
 transform: rotate(var(--themeSelectorRotate));
 .theme-selector {
@@ -13,26 +14,26 @@ transform: rotate(var(--themeSelectorRotate));
     /* right: 10; */
     display: inline-block;
     /* top: 25; */
-    width: 40px;
-    height: 5px;
+    width: 1px;
+    height: 1px;
 }
 .theme-selector input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-.slider {
+.round {
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: transparent;
+    
     /* -webkit-transition: .4s; */
     /* transition: .4s; */
 }
-.slider:before {
+.round {
     position: absolute;
     content: "";
     height: 20px; /*20px;*/
@@ -44,42 +45,36 @@ transform: rotate(var(--themeSelectorRotate));
     /* -webkit-transition: .4s; */
     /* transition: .4s; */
 }
-input:checked + .slider {
+/* input:checked + .slider {
   background-color: transparent;//#2196F3;//change this color to match other blues
-}
-input:checked + .slider:before {
+} */
+input:checked + .round {
   background-color: var(--sliderBeforeColor);//#2196F3;//change this color to match other blues
+}
+input:checked + .round:hover {
+  background-color: var(--sliderBeforeColorHover);//#2196F3;//change this color to match other blues
 }
 
 /* input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 } */
 
-.slider:before {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  
-  transform: translateX(29px); //distance is the length of line
-}
-.slider.round {
-  border-radius: 18px;
-  top: 12px;
-  left: -20px; //length of line determined by this and below
-  right: 21px; //length of line determined by this and above
-  bottom: -14px;
-  /* transition: all 1s; */
+.round {
+  -webkit-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px); //distance is the length of line
 }
 
-.slider.round:before {
+.round {
   border-radius: 50%;
 }
-.slider.round:hover::before {
+.round:hover {
   background-color: var(--sliderBeforeColorHover);
 }
 
 //this checks if hover is availabe (not available on mobile) if it is not then it won't change the color. There was an issue where you would click and the hover state would stay until you clicked somewhere else
 @media (hover: none) {
-.slider.round:hover::before {
+.round:hover {
   background-color: var(--sliderBeforeColor);
 }
 
@@ -105,9 +100,8 @@ export default function ThemeSelector({ themeSelectorState, setThemeSelectorStat
     <ThemeSelectorStyles /*ref={myRef}*/>
         <label className="theme-selector">
             <input type="checkbox" checked={colorMode === 'dark'} onChange={ev => { setColorMode(ev.target.checked ? 'dark' : 'light');}} />
-            <span className="slider round" onClick={() => setThemeSelectorState(!themeSelectorState)}>
+            <span className="round" onClick={() => setThemeSelectorState(!themeSelectorState)}>
       {/* {themeSelectorState ? selectorOn() : selectorOff()} */}
-
             </span>
         </label>
     </ThemeSelectorStyles>
