@@ -23,6 +23,10 @@ export const COLORS = {
       light: 'black', // white
       dark: 'white', //white
     },
+    buttonBoxShadowColor: {
+      light: 'rgba(0, 0, 0, 0.1)', // white
+      dark: 'rgba(255, 255, 255, 0.1)', //white
+    },
     footerColor: {
       light: '#ffc600', // white
       dark: 'rgba(25, 53, 73, 1)', // navy navy blue

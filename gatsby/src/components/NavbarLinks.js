@@ -57,10 +57,11 @@ const MenuContainer = styled.div`
 export default function NavbarLinks({ menuState, setMenuState}) {
     let navLinks = [
         {path:'/about',title:'About'},
-        {path:'/education',title:'Education'},
-        {path:'/technologies',title:'Technologies'},
-        {path:'/uses',title:'Uses'},
-        {path:'/work',title:'Work'},
+        // {path:'/education',title:'Education'},
+        // {path:'/technologies',title:'Technologies'},
+        // {path:'/uses',title:'Uses'},
+        // {path:'/work',title:'Work'},
+        {path:'/contact',title:'Contact'},
         {path:'/blog',title:'Blog'},
     ]
 
