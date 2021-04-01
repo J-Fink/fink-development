@@ -61,7 +61,8 @@ const AboutStyles = styled.div`
 export default function AboutPage() { 
     return (
         <>
-            <SEO />
+            <SEO title={`We have an about page`} />
+            
             <BasicPageStyles>
                 <AboutStyles>
                     <StaticImage

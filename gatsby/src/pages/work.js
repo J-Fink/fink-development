@@ -1,8 +1,10 @@
 import React from 'react';
 import BasicPageStyles from '../styles/BasicPageStyles';
-
+import SEO from '../components/SEO';
 export default function WorkPage() {
     return (
+        <>
+        <SEO title={`work page`} />
         <BasicPageStyles>
             <section>
                 I have worked at the Cathedral of Saint Paul in St. Paul, MN since 2012! <br />
@@ -21,5 +23,6 @@ export default function WorkPage() {
                 </ol>
             </section>
         </BasicPageStyles>
+        </>
     )
 }
