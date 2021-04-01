@@ -7,6 +7,7 @@ export default {
     title: `Fink Development Site`,
     siteUrl: `https://www.joefink.dev`,
     description: `Think Fink for Development`,
+    twitter: `@joefink_dev`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
