@@ -1,13 +1,9 @@
 ---
 path: '/first-post'
-title: 'First Blog Post'
-summary: 'This is a post blah blah'
+title: 'Blog Post Test'
+summary: 'This is a test blog post'
 ---
 
-Hello!!
-##Hi Maureen!!
-1. item
-1. item
-1. item
-
-Hello Folks! first Blog Post, whoot, whoot!!!
+#Greetings
+##Hi my name is Joe
+This is a test blog post, hope you enjoy!
