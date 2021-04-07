@@ -8,6 +8,7 @@ position: absolute;
 right: 25px;
 bottom: 8px;
 transition: all 1s;
+transition: transform 0.5s;
 transform: rotate(var(--themeSelectorRotate));
 .theme-selector {
     position: absolute;
