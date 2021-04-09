@@ -12,6 +12,7 @@ const AboutStyles = styled.div`
     text-align: center;
     /* --imageHeight: 400px;
     --imageWidth: 400px; */
+    width: 100vw;
     --avatarImgHeight: 400px;
     --avatarImgWidth: 400px;
     --avatarImgLeft: -58vw;
@@ -29,11 +30,11 @@ const AboutStyles = styled.div`
         margin-left: var(--avatarImgLeft);
         overflow: hidden;
     }
-    .info .gatsby-image-wrapper {
+    .cotton-candy {
         height: var(--avatarImgHeight);
         width: var(--avatarImgWidth);
         border-radius: 50%;
-        margin-top: 55px;
+        margin: 0 auto;
         margin-left: 0;
         overflow: hidden;
 
@@ -115,12 +116,11 @@ export default function AboutPage() {
                         <p>
                             I have a lot of interests, when the COVID reality set in I picked up another hobby. My kids love it
                         </p>
-                        <StaticImage
+                        <StaticImage className="cotton-candy"
                         imgClassName="test"
                         alt="Joe speaks into a microphone"
                         src="../assets/images/joeHoldsCottonCandy.jpg"
                         placeholder="traced SVG"
-                        layout="fixed"
                         width={400}
                         height={400}
                         // objectFit={cover}

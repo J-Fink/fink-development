@@ -75,6 +75,7 @@ const Navbox = styled.div`
 `;
 const NavStyles = styled.header`
     --line-height: 6.5vh;
+    left: 0;
     width: 100%;
     height: var(--headerHeight);
     display: flex;

@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
         overflow: var(--htmlOverflow);
     }
     body {
+        width: 100vw;
         margin: 0;
         background: var(--backgroundColor);
         color: var(--textColor);

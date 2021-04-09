@@ -7,6 +7,7 @@ import { ThemeProvider } from './ThemeContext';
 import '@fontsource/roboto';
 const LayoutStyles = styled.div`
     transition: all var(--transition-duration) ease-in-out;
+    /* width: 100vw; */
     .site {
         display: flex;
         min-height: 100vh;
