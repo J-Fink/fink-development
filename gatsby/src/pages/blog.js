@@ -3,6 +3,7 @@ import BasicPageStyles from '../styles/BasicPageStyles';
 import SEO from '../components/SEO.js';
 import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 const BlogGrid = styled.div`
     display: grid;
@@ -30,7 +31,7 @@ const BlogStyles = styled.div`
     
 `;
 export default function BlogPage({ data }) { 
-    console.log(data);
+    console.log(data.allMarkdownRemark.nodes[0])
     return (
         <>
             <SEO />
@@ -41,6 +42,7 @@ export default function BlogPage({ data }) {
                         {data.allMarkdownRemark.edges.map(post => {
                             return (
                             <BlogGridItem>
+                                <Img fluid={data.allMarkdownRemark.nodes[0].frontmatter.featuredImage.childImageSharp.fluid} />
                                 <Link 
                                 key={post.node.id}
                                 to={post.node.frontmatter.path}>
@@ -72,6 +74,18 @@ export const pageQuery = graphql`
                     }
                 }
             }
+            nodes {
+                frontmatter {
+                    featuredImage {
+                        childImageSharp {
+                            fluid(maxWidth: 400) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+
     `;
