@@ -11,9 +11,11 @@ const BlogGrid = styled.div`
 
 const BlogGridItem = styled.div`
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-rows: 4% 1fr;
     grid-gap: 3rem;
-
+    .description {
+        font-style: italic;
+    }
     a {
         text-decoration: none;
         color: var(--textColor);
@@ -34,7 +36,7 @@ export default function BlogPage({ data }) {
             <SEO />
             <BasicPageStyles>
                 <BlogStyles>
-                        <h2>Index</h2>
+                        <h2>Blog</h2>
                     <BlogGrid>
                         {data.allMarkdownRemark.edges.map(post => {
                             return (
@@ -44,7 +46,7 @@ export default function BlogPage({ data }) {
                                 to={post.node.frontmatter.path}>
                                     {post.node.frontmatter.title}
                                     </Link>
-                                    <div>
+                                    <div className="description">
                                         {post.node.frontmatter.summary}
                                     </div>
                             </BlogGridItem>
