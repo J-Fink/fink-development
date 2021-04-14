@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'gatsby';
-
+import BasicPageStyles from '../styles/BasicPageStyles';
 // import BackgroundImage from 'gatsby-background-image';
 
 const HeroStyles = styled.div`
@@ -14,17 +14,17 @@ const HeroStyles = styled.div`
     line-height: 1.25;
     font-family: monospace;
     width: 100vw;
-    height: 100vh;
+    height: auto; //help get rid of scroll bars
     /* background-color: var(--blue); */
     white-space: pre-wrap;
     color: white;
     cursor: default;
     text-align: center;
-    --typewriter-width: 888px;
-    --typewriter-height: 500px;
-    --monitor-stand-top: 590px;
+    --typewriter-width: /*888px;*/ 800px;
+    --typewriter-height: /*500px;*/ 450px;
+    --monitor-stand-top: 540px;
     --monitor-base-top: 42px;
-    background: var(--heroBackground);
+    /* background: var(--heroBackground); */
 
     .Typewriter {
         background-color: var(--monitorBackgroundColor);
@@ -150,6 +150,7 @@ const HeroStyles = styled.div`
 export default function Hero() {
     // console.log(Link);
     return (
+        <BasicPageStyles>
     <HeroStyles>
         <div className="monitor-stand">
             <div className="monitor">
@@ -174,7 +175,7 @@ export default function Hero() {
             </div>
         </div>
     </HeroStyles> 
-
+    </BasicPageStyles>
     
     )
     

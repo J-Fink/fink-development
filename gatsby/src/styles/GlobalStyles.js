@@ -19,11 +19,14 @@ const GlobalStyles = createGlobalStyle`
         font-size: 10px;
         font-family: var(--fontFamily);
         overflow: var(--htmlOverflow);
+        height: 100vh;
     }
     body {
+        min-height: 100vh;
         width: 100vw;
         margin: 0;
-        background: var(--backgroundColor);
+        background: var(--heroBackground);
+        background-repeat: repeat;
         color: var(--textColor);
     }
     @media (max-width: 768px) {
@@ -33,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
         }
         body.noscroll {
             overflow: visible;
-            height: 100%
+            min-height: 100vh;
         }
 
     }
