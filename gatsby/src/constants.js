@@ -8,8 +8,8 @@ export const COLORS = {
     //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
     // },
     heroBackground: {
-      light: 'radial-gradient(circle, rgb(255 255 255) 30%, #ffc60052 100%',//orange with white
-      dark: 'radial-gradient(circle, rgb(58 217 0) 30%, rgb(25 53 73) 100%'/*'radial-gradient(circle farthest-side, var(--successGreen), rgb(25 53 73)'*/, //
+      light: 'radial-gradient(circle, #ffc600  30%, rgb(255 255 255) 100%',//orange with white
+      dark: 'radial-gradient(circle, rgb(58 217 0) 30%, rgb(25 53 73) 100%', //
     },
     monitorBackgroundColor: {
       light: 'rgba(25, 53, 73, 1)', // dark blue
