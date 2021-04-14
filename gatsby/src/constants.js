@@ -8,7 +8,7 @@ export const COLORS = {
     //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
     // },
     heroBackground: {
-      light: 'radial-gradient(circle, #ffc600  30%, rgb(255 255 255) 100%',//orange with white
+      light: 'radial-gradient(circle, #ffffff  0%, #ffc600 100%',//orange with white
       dark: 'radial-gradient(circle, rgb(58 217 0) 30%, rgb(25 53 73) 100%', //
     },
     monitorBackgroundColor: {
