@@ -3,8 +3,8 @@ import BasicPageStyles from '../styles/BasicPageStyles';
 import SEO from '../components/SEO.js';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
-import { HeadingStyles } from '../components/Heading';
-import CottonCandyImg from '../assets/images/joeHoldsCottonCandy.jpg';
+
+
 
 
 
@@ -12,6 +12,7 @@ const AboutStyles = styled.div`
     text-align: center;
     /* --imageHeight: 400px;
     --imageWidth: 400px; */
+    line-height: 2.5rem;
     width: 100vw;
     --avatarImgHeight: 400px;
     --avatarImgWidth: 400px;
@@ -43,15 +44,21 @@ const AboutStyles = styled.div`
         border-radius: 50%;
     } */
     h1 {
-    position: relative;
+        position: relative;
       top: var(--h1Top);
       font-size: 9rem;
+      width: 50vw;
+      margin: auto;
+      line-height: normal;
     }
     @media (max-width: 1315px) {
         --avatarImgHeight: 215px;
         --avatarImgWidth: 215px;
-        --introTop: -352px;
-        --h1Top: -287px;
+        /* --introTop: -352px; */
+        /* --h1Top: -287px; */
+
+
+
     }
     @media (max-width: 800px) {
         --introLeft: 1px;
@@ -63,9 +70,16 @@ const AboutStyles = styled.div`
         position: relative;
         top: var(--introTop);
         left: var(--introLeft);
+        width: 50vw;
+        margin: 50px auto 0 auto;
+    }
+    .intro {
+        width: 50vw;
+        margin: 50px auto 0 auto;
     }
     .info {
-        width: 75vw;
+        width: 55vw;
+        text-align: left;
         margin: 0 auto;
     }
     .info p a {
@@ -94,16 +108,17 @@ export default function AboutPage() {
                         // layout="fixed"
                         width={400}
                         height={400}
-                      
                     />
-                    {/* <div> */}
-                    <h1>About</h1>
-                <section className="intro">
-                        <p>
-                            Hi, I'm Joe!<br />
-                            I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota<br />
-                        </p>
-                </section>
+                    <span className="container">
+                        {/* <div> */}
+                        <h1>About</h1>
+                        <section className="intro">
+                                <p>
+                                    Hi, I'm Joe!<br />
+                                    I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota<br />
+                                </p>
+                        </section>
+                    </span>
                 <section className="info">
                         <p>
                             I work for a nonprofit organization where I wear many hats. From maintaining our website(built with Drupal 7), managing livestreaming our services, to all around logistics. I believe having a smooth workflow makes life easier, at the same time I find it helpful to figure out the desired outcome first then find a path to achieve that outcome. In my free time I make websites, and like to use my new found skills to help nonprofit organizations.
