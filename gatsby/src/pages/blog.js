@@ -20,6 +20,8 @@ const BlogGridItem = styled.div`
     a {
         text-decoration: none;
         color: var(--textColor);
+        height: fit-content;
+        margin: 0 auto;
     }
     a:hover {
         color: var(--textColorHover);
@@ -31,7 +33,7 @@ const BlogStyles = styled.div`
     
 `;
 export default function BlogPage({ data }) { 
-    console.log(data.allMarkdownRemark.nodes[0])
+    // console.log(data.allMarkdownRemark.nodes[0])
     return (
         <>
             <SEO />
@@ -42,7 +44,7 @@ export default function BlogPage({ data }) {
                         {data.allMarkdownRemark.edges.map(post => {
                             return (
                             <BlogGridItem>
-                                <Img fluid={data.allMarkdownRemark.nodes[0].frontmatter.featuredImage.childImageSharp.fluid} />
+                                {/* <Img fluid={data.allMarkdownRemark.nodes[0].frontmatter.featuredImage.childImageSharp.fluid} /> */}
                                 <Link 
                                 key={post.node.id}
                                 to={post.node.frontmatter.path}>
@@ -74,17 +76,17 @@ export const pageQuery = graphql`
                     }
                 }
             }
-            nodes {
-                frontmatter {
-                    featuredImage {
-                        childImageSharp {
-                            fluid(maxWidth: 400) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                }
-            }
+            # nodes {
+            #     frontmatter {
+            #         featuredImage {
+            #             childImageSharp {
+            #                 fluid(maxWidth: 400) {
+            #                     ...GatsbyImageSharpFluid
+            #                 }
+            #             }
+            #         }
+            #     }
+            # }
         }
     }
 

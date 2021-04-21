@@ -92,6 +92,14 @@ export const COLORS = {
       light: '0 0 17px #000',
       dark: '0 0 17px #fff',
     },
+    postTitleColor: {
+      light: 'rgb(255 198 0 / 23%)',
+      dark: 'rgb(25 53 73 / 23%)',
+    },
+    postTitleSkew: {
+      light: '20deg',
+      dark: '-20deg',
+    },
   };
   
   export const COLOR_MODE_KEY = 'color-mode';

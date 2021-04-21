@@ -73,7 +73,7 @@ input:checked + .round:hover {
   background-color: var(--sliderBeforeColorHover);
 }
 
-//this checks if hover is availabe (not available on mobile) if it is not then it won't change the color. There was an issue where you would click and the hover state would stay until you clicked somewhere else
+//this checks if hover is available (not available on mobile) if it is not then it won't change the color. There was an issue where you would click and the hover state would stay until you clicked somewhere else
 @media (hover: none) {
 .round:hover {
   background-color: var(--sliderBeforeColor);
