@@ -78,7 +78,7 @@ export const COLORS = {
     },
     themeSelectorRotate: {
       light: '280deg',
-      dark: '250deg',
+      dark: '260deg',
     },
     sliderBeforeColor: {
       light: '#ffc600',
