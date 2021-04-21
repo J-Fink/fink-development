@@ -30,6 +30,9 @@ const BlogGridItem = styled.div`
 `;
 const BlogStyles = styled.div`
     text-align: center;
+    h2 {
+        text-transform: uppercase;
+    }
     
 `;
 export default function BlogPage({ data }) { 
@@ -39,7 +42,7 @@ export default function BlogPage({ data }) {
             <SEO />
             <BasicPageStyles>
                 <BlogStyles>
-                        <h2>Blog</h2>
+                        <h2>Stuff I've Learned Blog</h2>
                     <BlogGrid>
                         {data.allMarkdownRemark.edges.map(post => {
                             return (
