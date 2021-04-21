@@ -32,6 +32,7 @@ const BlogStyles = styled.div`
     text-align: center;
     h2 {
         text-transform: uppercase;
+        text-decoration: underline;
     }
     
 `;
