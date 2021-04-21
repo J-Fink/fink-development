@@ -5,8 +5,8 @@ const ThemeSelectorStyles = styled.div`
 width: 40px;
 height: 40px;
 position: absolute;
-right: 25px;
-bottom: 8px;
+right: 5px;
+bottom: -6px;
 transition: all 1s;
 transition: transform 0.5s;
 transform: rotate(var(--themeSelectorRotate));
