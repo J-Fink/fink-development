@@ -26,8 +26,9 @@ const GlobalStyles = createGlobalStyle`
         width: 100vw;
         margin: 0;
         background: var(--heroBackground);
-        background-repeat: repeat;
+        /* background-repeat: repeat; */
         color: var(--textColor);
+        background-attachment: fixed; //this keeps the background fixed 
     }
     @media (max-width: 768px) {
 
