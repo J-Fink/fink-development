@@ -78,6 +78,9 @@ input:checked + .round:hover {
 .round:hover {
   background-color: var(--sliderBeforeColor);
 }
+input:checked + .round:hover {
+  background-color: var(--sliderBeforeColor);//#2196F3;//change this color to match other blues
+}
 
 }
 `;
