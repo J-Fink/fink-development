@@ -14,87 +14,80 @@ const AboutStyles = styled.div`
     --imageWidth: 400px; */
     line-height: 2.5rem;
     width: 100vw;
-    --avatarImgHeight: 400px;
-    --avatarImgWidth: 400px;
+    --avatarImgHeight: 100%;
+    --avatarImgWidth: 100%;
     /* --avatarImgLeft: -58vw; */
     --introTop: -483px;
     --introLeft: 145px;
     --h1Top: -445px;
+    p {
+        overflow-wrap: anywhere;
+        max-width: 1200px;
+        text-align: left;
+        padding: 0 50px;
+        margin: auto auto;
+    }
     .flex-container {
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 25px;
+        p {
+            margin-left: 25px;
+            margin-right: 0;
+            /* max-width: 1200px; */
+        }
     }
-    .mobile-image {
+    
+    .mobile-image { //allows me to target the actual img tag so the round circle shows up on mobile
         border-radius:50%;
     }
     .gatsby-image-wrapper {
-        height: var(--avatarImgHeight);
-        width: var(--avatarImgWidth);
         border-radius: 50%;
-        /* margin-top: 95px; */
-        /* margin-left: var(--avatarImgLeft); */
-        overflow: hidden;
+
     }
     .cotton-candy {
         height: var(--avatarImgHeight);
         width: var(--avatarImgWidth);
-        border-radius: 50%;
         margin: 0 auto;
         margin-left: 0;
         overflow: hidden;
 
     }
-    /* img {
-        border-radius: 50%;
-    } */
+    
     h1 {
       top: var(--h1Top);
       font-size: 9rem;
-      width: 50vw;
       margin: 45px auto 0 auto;
       line-height: normal;
     }
-    @media (max-width: 1315px) {
-        /* --avatarImgHeight: 215px;
-        --avatarImgWidth: 215px; */
-        /* --introTop: -352px; */
-        /* --h1Top: -287px; */
-
-
-
+    @media (max-width: 500px) {
+        .flex-container {
+            flex-direction: column;
+            p {
+                margin-bottom: 25px;
+            }
+        }
     }
-    @media (max-width: 800px) {
-        /* --introLeft: 1px;
-        --h1Top: -75px;
-        --avatarImgLeft: -26vw;
-        --introTop: -154px; */
-    }
-    /* .intro {
-        position: relative;
-        top: var(--introTop);
-        left: var(--introLeft);
-        width: 50vw;
-        margin: 50px auto 0 auto;
-    }
-    .intro {
-        width: 50vw;
-        margin: 50px auto 0 auto;
-    }
-    .info {
-        width: 55vw;
-        text-align: left;
-        margin: 0 auto;
-    } */
+    
     p a {
         text-decoration: none;
         font-style: italic;
         color: var(--textColor);
+        text-transform: uppercase;
     }
     p a:hover {
-        color: var(--navTextHoverColor);
+        color: var(--anchorTextHoverColor); /*var(--navTextHoverColor);*/
+        text-decoration: underline;
     }
-  
+  @media (hover: none) {//on mobile where there is no hover, this makes it so the color doesn't change on click and get stuck in the 'hover' state
+    p a:hover {
+        color: var(--textColor);
+    } 
+  }
 `;
 
 export default function AboutPage() { 
@@ -115,9 +108,10 @@ export default function AboutPage() {
                         alt="Joe speaks into a microphone"
                         src="../assets/images/joeFromTheSide.jpg"
                         placeholder="traced SVG"
-                        // layout="fixed"
+                        layout="constrained"
                         width={400}
                         height={400}
+                        // aspectRatio={16/9}
                         />
                     </span>
                     
