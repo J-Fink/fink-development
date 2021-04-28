@@ -25,7 +25,7 @@ const AboutStyles = styled.div`
         max-width: 1200px;
         text-align: left;
         padding: 0 50px;
-        margin: auto auto;
+        margin: auto auto 25px auto;
     }
     .flex-container {
         display: flex;
@@ -36,8 +36,9 @@ const AboutStyles = styled.div`
         margin-right: 15px;
         margin-bottom: 25px;
         p {
-            margin-left: 25px;
-            margin-right: 0;
+            margin: 0 0 25px 0;
+            /* margin-left: 25px;
+            margin-right: 0; */
             /* max-width: 1200px; */
         }
     }
@@ -47,14 +48,6 @@ const AboutStyles = styled.div`
     }
     .gatsby-image-wrapper {
         border-radius: 50%;
-
-    }
-    .cotton-candy {
-        height: var(--avatarImgHeight);
-        width: var(--avatarImgWidth);
-        margin: 0 auto;
-        margin-left: 0;
-        overflow: hidden;
 
     }
     
@@ -124,14 +117,15 @@ export default function AboutPage() {
                         I started to learn how to program in August of 2019. There has been so much I have learned so far(and yet still so much more!), you can check out my GitHub <a href="https://github.com/J-Fink" rel="noreferrer nofollow">here</a>.
                     </p>
                     <p>
-                        I have a lot of interests, when the COVID reality set in I picked up another hobby. My kids love it
+                        I have a lot of interests, when the COVID set in I picked up another hobby. My kids love it
                     </p>
                     
-                    <StaticImage className="cotton-candy"
-                    imgClassName="mobile-image"
-                    alt="Joe speaks into a microphone"
+                    <StaticImage
+                    imgClassName="mobile-image"//this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
+                    alt="Joe holds a giant cone of cotton candy"
                     src="../assets/images/joeHoldsCottonCandy.jpg"
                     placeholder="traced SVG"
+                    layout="constrained"
                     width={400}
                     height={400}
                   />
