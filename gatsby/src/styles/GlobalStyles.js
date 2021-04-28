@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 10px;
         font-family: var(--fontFamily);
         overflow: var(--htmlOverflow);
-        height: 100vh;
+        /* min-height: 100vh; */
     }
     body {
         min-height: 100vh;
