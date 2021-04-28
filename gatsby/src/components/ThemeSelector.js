@@ -6,7 +6,7 @@ width: 40px;
 height: 40px;
 position: absolute;
 right: 5px;
-bottom: -6px;
+bottom: auto;
 transition: all 1s;
 transition: transform 0.5s;
 transform: rotate(var(--themeSelectorRotate));
@@ -35,12 +35,12 @@ transform: rotate(var(--themeSelectorRotate));
     /* transition: .4s; */
 }
 .round {
-    position: absolute;
-    content: "";
+    /* position: absolute; */
+    /* content: ""; */
     height: 20px; /*20px;*/
     width: 20px;/*20px;*/
-    left: 3px;
-    bottom: -7px;
+    /* left: 3px;
+    bottom: -7px; */
     background-color: var(--sliderBeforeColor);
     box-shadow: var(--sliderBeforeBoxShadow);
     /* -webkit-transition: .4s; */

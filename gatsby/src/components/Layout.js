@@ -10,12 +10,14 @@ const LayoutStyles = styled.div`
     /* width: 100vw; */
     .site {
         display: flex;
+        position: relative;
         min-height: 100vh;
         flex-direction: column;
         min-height: -webkit-fill-available; // fixes issue with bottom footer being hidden on mobile
         }
     .site-content {
         flex-grow: 1;
+        /* padding-bottom: var(--footerHeight); */
     }
 `; 
 export default function Layout({ children }) {
@@ -28,8 +30,8 @@ export default function Layout({ children }) {
                     {children}
                     <div className="site-content">
                     </div>
-                    <Footer />
                 </div>
+                <Footer />
             </LayoutStyles>
         </ThemeProvider>
     )

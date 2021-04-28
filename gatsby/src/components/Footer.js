@@ -4,8 +4,8 @@ import ThemeSelector from './ThemeSelector';
 import SocialLinks from './SocialLinks';
 const FooterStyles = styled.footer`
         text-align: center;
-        bottom: 0;
-        position: fixed;
+        /* position: absolute; */
+        /* bottom: 0; */
         width: 100%;
         background-color: var(--footerColor);
         font-size: 1.65rem;
