@@ -8,13 +8,15 @@ import styled from 'styled-components';
 const PostStyles = styled.div`
     text-align: center;
     p {
-        margin: 0 auto;
-        max-width: 800px;
+        overflow-wrap: anywhere;
+        max-width: 1200px;
         text-align: left;
+        padding: 0 50px;
+        margin: auto auto 25px auto;
         }
-    .gatsby-image-wrapper {
+    /* .gatsby-image-wrapper {
         width: 25vw;
-    }
+    } */
     .post-title-container {
         background-color: var(--postTitleColor);
         height: 10vh;
@@ -27,6 +29,14 @@ const PostStyles = styled.div`
     .post-title-container span {
         display: inline-block;
         transform: skew(calc(-1 * var(--postTitleSkew)));
+    }
+    ul {
+        width: 75%;
+        text-align: left;
+        li {
+            margin-bottom: 12.5px;
+        }
+        margin-bottom: 25px;
     }
 `;
 
