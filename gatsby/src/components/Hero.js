@@ -82,6 +82,9 @@ const HeroStyles = styled.div`
         position: relative;
         z-index: 2;
     }
+    #printed-container a {
+        color: white;
+    }
     @media (max-width: 1035px) {
         margin-top: var(--headerHeight);
         --typewriter-width: 605px; //keep 16:9 ratio
@@ -93,7 +96,7 @@ const HeroStyles = styled.div`
         --typewriter-width: 300px; //keep 16:9 ratio
         --typewriter-height: 169px;
         font-size: 1.5rem;
-        white-space: pre-wrap;
+        white-space: pre;
         --monitor-stand-top: 254px;
         
         
@@ -103,7 +106,7 @@ const HeroStyles = styled.div`
         --typewriter-height: 315px;
         --monitor-stand-top: 326px;
         font-size: 1rem;
-        white-space: break-spaces;
+        white-space: pre;
         .Typewriter {
             overflow-x: hidden;
         }
@@ -117,9 +120,6 @@ const HeroStyles = styled.div`
             border-radius: 100%;
         }
     }
-    /* #printed-container {
-        border: 1px solid white;
-    } */
     
     /* #gatsby-focus-wrapper .Typewriter .Typewriter__wrapper .var-highlight{
         color: #C0AD60;
@@ -149,6 +149,8 @@ const HeroStyles = styled.div`
 
 export default function Hero() {
     // console.log(Link);
+    let string = '&lt;'
+    let newString = '&lt;';
     return (
         <BasicPageStyles>
     <HeroStyles>
@@ -157,17 +159,11 @@ export default function Hero() {
         <Typewriter onInit = {(typewriter) => {
             typewriter.changeDelay(1).typeString(`
 <span id="printed-container" class="code">
-&lt;<span class="tag-highlight">ul </span><span class="attribute-name">id</span>=<span class="string">"menu"</span><span class="attribute-name">className</span>=<span class="string">"dropdown-menu"</span>&gt;
- &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
-  &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"learn-more-link"</span><span  class="attribute-name">href</span>=<span class="string">"#learn-more"</span>&gt;<span class="navigation">About</span>&lt;/a&gt;
-   &lt;/li&gt;
- &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
-     &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"education-link"</span><span  class="attribute-name">href</span>=<span class="string">"#education"</span>&gt;<span class="navigation">Education</span>&lt;/a&gt;
- &lt;/li&gt;
-  &lt;<span class="tag-highlight">li </span><span class="attribute-name">className</span>=<span class="string">"dropdown-content"</span>&gt;
-   &lt;<span class="tag-highlight">a </span><span class="attribute-name">className</span>=<span class="string">"technology-link"</span><span  class="attribute-name">href</span>=<span class="string">"#technology"</span>&gt;<a href="/technologies" class="navigation">Technologies</a>&lt;/a&gt;
- &lt;/li&gt;
-&lt;/ul&gt;
+&lt;<span class="tag-highlight">div </span><span class="attribute-name">class</span>=<span class="string">"NavbarLinks__MenuContainer"</span>&gt;
+&lt;<span class="tag-highlight">a </span><span class="attribute-name">class</span>=<span class="string">"NavbarLinks__NavItem"</span><span  class="attribute-name">href</span>=<span class="string">"/about"</span>&gt;<a href="/about" class="navigation">About</a>&lt;/a&gt;
+&lt;<span class="tag-highlight">a </span><span class="attribute-name">class</span>=<span class="string">"NavbarLinks__NavItem"</span><span  class="attribute-name">href</span>=<span class="string">"/contact"</span>&gt;<a href="/contact" class="navigation">Contact</a>&lt;/a&gt;
+&lt;<span class="tag-highlight">a </span><span class="attribute-name">class</span>=<span class="string">"NavbarLinks__NavItem"</span><span  class="attribute-name">href</span>=<span class="string">"/blog"</span>&gt;<a href="/blog" class="navigation">Blog</a>&lt;/a&gt;
+&lt;<span class="tag-highlight">/div</span>&gt;
 </span>
             
         `).start();
