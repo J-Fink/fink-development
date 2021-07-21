@@ -18,6 +18,7 @@ const PostStyles = styled.div`
         width: 25vw;
     } */
     .post-title-container {
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
         background-color: var(--postTitleColor);
         height: 10vh;
         line-height: 10vh;
@@ -47,7 +48,7 @@ export default function Template({ data }) {
     return (
         <BasicPageStyles>
             <PostStyles>
-                <h1 className="post-title-container"><span>{post.frontmatter.title}</span></h1>
+                <a href={post.frontmatter.url}><h1 className="post-title-container"><span>{post.frontmatter.title}</span></h1></a>
                 {/* <Img fluid={featuredImgFluid} /> */}
                 <div dangerouslySetInnerHTML={{__html: post.html}}/>
             </PostStyles>
@@ -63,13 +64,7 @@ export const postQuery = graphql`
                 title
                 path
                 summary
-                # featuredImage {
-                #     childImageSharp {
-                #         fluid(maxWidth: 400) {
-                #             ...GatsbyImageSharpFluid
-                #         }
-                #     }
-                # }
+                url
             }
         }      
     }
