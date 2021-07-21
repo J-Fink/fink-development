@@ -63,6 +63,7 @@ export default function NavbarLinks({ menuState, setMenuState}) {
         // {path:'/work',title:'Work'},
         {path:'/contact',title:'Contact'},
         {path:'/blog',title:'Blog'},
+        {path:'/projects',title:'Projects'},
     ]
 
     return (

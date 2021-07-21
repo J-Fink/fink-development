@@ -83,6 +83,7 @@ const NavStyles = styled.header`
     position: fixed;
     justify-content: space-between;
     text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
     
     /* margin: 0 auto; */
     z-index: 3;

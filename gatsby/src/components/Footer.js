@@ -6,6 +6,7 @@ const FooterStyles = styled.footer`
         text-align: center;
         /* position: absolute; */
         /* bottom: 0; */
+        box-shadow: 0 3px 19px -4px black;
         width: 100%;
         background-color: var(--footerColor);
         font-size: 1.65rem;
