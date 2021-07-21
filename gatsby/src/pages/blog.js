@@ -22,6 +22,15 @@ const BlogGridItem = styled.div`
         color: var(--textColor);
         height: fit-content;
         margin: 0 auto;
+        box-shadow: rgb(0 0 0 / 20%) 2px 2px 3px;
+        transform: skew(var(--postTitleSkew));
+        background-color: var(--postTitleColor);
+        
+        .post-title {
+            display: inline-block;
+            /* background-color: blue; */
+            transform: skew(calc(-1 * var(--postTitleSkew)));
+       }
     }
     a:hover {
         color: var(--textColorHover);
@@ -37,7 +46,7 @@ const BlogStyles = styled.div`
     
 `;
 export default function BlogPage({ data }) { 
-    // console.log(data.allMarkdownRemark.nodes[0])
+    console.log(data.allMarkdownRemark.nodes)
     return (
         <>
             <SEO />
@@ -46,20 +55,23 @@ export default function BlogPage({ data }) {
                         <h2>Stuff I've Learned Blog</h2>
                     <BlogGrid>
                         {data.allMarkdownRemark.edges.map(post => {
+                            if(post.node.frontmatter.project){
+                                return ""
+                            }
                             return (
                             <BlogGridItem>
-                                {/* <Img fluid={data.allMarkdownRemark.nodes[0].frontmatter.featuredImage.childImageSharp.fluid} /> */}
                                 <Link 
                                 key={post.node.id}
                                 to={post.node.frontmatter.path}>
-                                    {post.node.frontmatter.title}
+                                    <span className="post-title">{post.node.frontmatter.title}</span>
                                     </Link>
                                     <div className="description">
                                         {post.node.frontmatter.summary}
                                     </div>
                             </BlogGridItem>
-                            );
-                        })}
+                            )           
+                    })
+                    }
                     </BlogGrid>
                 </BlogStyles>
             </BasicPageStyles>
@@ -77,6 +89,7 @@ export const pageQuery = graphql`
                         title
                         path
                         summary
+                        project
                     }
                 }
             }

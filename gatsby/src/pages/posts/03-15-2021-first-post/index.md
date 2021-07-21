@@ -2,6 +2,7 @@
 path: '/what-is-a-server'
 title: 'What IS a server?'
 summary: 'A brief explanation of what a server is'
+project: false
 # containsImage: false
 # featuredImage: test.png
 ---
