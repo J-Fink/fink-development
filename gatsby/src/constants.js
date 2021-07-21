@@ -1,57 +1,56 @@
 export const COLORS = {
     navColor: {
-      light: '#ffc600', // orange
-      dark: 'rgba(25, 53, 73, 1)'/*'rgba(25, 53, 73, 0.85)'*/, // near-black
+      light: '#ffc600', 
+      dark: 'rgba(25, 53, 73, 1)',
     },
     // navHoverColor: {
-    //   light: 'blue', // white
-    //   dark: 'rgba(33, 70, 97, 0.85)', // navy navy blue
+    //   light: 'blue',
+    //   dark: 'rgba(33, 70, 97, 0.85)',
     // },
     heroBackground: {
       light: 'radial-gradient(circle, #ffffff  0%, #ffc600 100%',//orange with white
       dark: 'radial-gradient(circle, rgb(58 217 0) 30%, rgb(25 53 73) 100%', //
     },
     monitorBackgroundColor: {
-      light: 'rgba(25, 53, 73, 1)', // dark blue
-      dark: 'rgba(25, 53, 73, 1)', //dark blue
+      light: 'rgba(25, 53, 73, 1)',
+      dark: 'rgba(25, 53, 73, 1)',
     },
     navTextHoverColor: {
-      light: 'white', // white
+      light: 'white', 
       dark: 'rgba(58, 217, 0, 1)', //successGreen
     },
     navTextColor: {
-      light: 'black', // white
-      dark: 'white', //white
+      light: 'black',
+      dark: 'white', 
     },
     buttonBoxShadowColor: {
-      light: 'rgba(0, 0, 0, 0.1)', // white
-      dark: 'rgba(255, 255, 255, 0.1)', //white
+      light: 'rgba(0, 0, 0, 0.1)', 
+      dark: 'rgba(255, 255, 255, 0.1)',
     },
     footerColor: {
-      light: '#ffc600', // white
-      dark: 'rgba(25, 53, 73, 1)', // navy navy blue
+      light: '#ffc600', 
+      dark: 'rgba(25, 53, 73, 1)', 
     },
     headerHeight: {
-      light: '64px', // Pinkish-red
-      dark: '64px', // Yellow
+      light: '64px',
+      dark: '64px', 
     },
     footerHeight: {
-      light: '64px', // Pinkish-red
-      dark: '64px', // Yellow
+      light: '64px', 
+      dark: '64px', 
     },
     navFontSize: {
-      light: '1.75rem', // 
-      dark: '1.75rem', // 
+      light: '1.75rem',  
+      dark: '1.75rem',  
     },
     navBoxBackgroundColor: {
-      light: '#ffc600', // orange
+      light: '#ffc600',
       dark: 'rgba(33, 70, 97, 1)', // lighter than Header
     },
     fontFamily: {
       light: 'Roboto, Sans-Serif', // roboto
       dark: 'monospace', // 'monospace'
     },
-    // Grays, scaling from least-noticeable to most-noticeable
     backgroundColor: {
       light: 'white',
       dark: 'black',
@@ -61,8 +60,8 @@ export const COLORS = {
       dark: 'white',
     },
     textColorHover: {
-      light: '#ffc600',
-      dark: 'rgba(58, 217, 0, 1)',
+      light: 'white',
+      dark: 'black',
     },
     heroBoxShadowColor: {
       light: 'rgba(58, 217, 0, 1)',//success green 58, 217, 0
