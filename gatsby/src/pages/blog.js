@@ -26,9 +26,8 @@ const BlogGridItem = styled.div`
         transform: skew(var(--postTitleSkew));
         background-color: var(--postTitleColor);
         
-        .post-title {
-            display: inline-block;
-            /* background-color: blue; */
+        span {
+            display: inline-block; //must add this or the below transform won't work
             transform: skew(calc(-1 * var(--postTitleSkew)));
        }
     }

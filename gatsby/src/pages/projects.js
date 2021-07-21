@@ -25,6 +25,10 @@ const ProjectsGridItem = styled.div`
         box-shadow: rgb(0 0 0 / 20%) 2px 2px 3px;
         transform: skew(var(--postTitleSkew));
         background-color: var(--postTitleColor);
+        span {
+            display: inline-block; //must add this or the below transform won't work
+            transform: skew(calc(-1 * var(--postTitleSkew)));
+        }
     }
     a:hover {
         color: var(--textColorHover);
@@ -56,7 +60,7 @@ export default function ProjectsPage({ data }) {
                                     <Link 
                                     key={post.node.id}
                                     to={post.node.frontmatter.path}>
-                                        {post.node.frontmatter.title}
+                                        <span>{post.node.frontmatter.title}</span>
                                         </Link>
                                         <div className="description">
                                             {post.node.frontmatter.summary}
