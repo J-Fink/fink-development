@@ -3,12 +3,14 @@ import BasicPageStyles from '../styles/BasicPageStyles';
 import styled from 'styled-components';
 
 const ContactPageStyles = styled.div`
+    border: 2px solid black;
     text-align: center;
     width: 50vw;
     height: 65vh;
     background-color: rgba(226, 226, 226, 0.5);
     border-radius: 5px;
     margin: auto;
+    margin-top: 15px;
     .container {
         text-align: center;
     }
@@ -42,14 +44,17 @@ const ContactPageStyles = styled.div`
     label input {
         border-radius: 5px;
         height: 25px;
-        width: 30vw;
+        width: 45vw;
     }
     label:nth-child(3) {
         padding-top: 35px;
         /* background-color: blue; */
     }
     textarea {
+        border-radius: 5px;
         padding-top: 50px;
+        width: 45vw;
+        border-width: 2px;
     }
 `;
 
@@ -64,19 +69,19 @@ export default function ContactPage() {
                         <input type="hidden" name="bot-field" />
                         <input type="hidden" name="form-name" value="contact" />
                         <label>
-                            <input required placeholder="What's your name?" type="text" name="name" id="name" />
+                            <input required placeholder="Name" type="text" name="name" id="name" />
                         </label>
                         <label>
-                            <input required placeholder="Can I get your email too?" type="email" name="email" id="email" />
+                            <input required placeholder="Email" type="email" name="email" id="email" />
                         </label>
                         {/* <label>
                             <input placeholder="Just wanting to connect?" type="text" name="subject" id="subject" />
                         </label> */}
                         <label>
-                            <textarea required name="message" id="message" rows="5" placeholder="Send me a message"></textarea>
+                            <textarea required name="message" id="message" rows="5" placeholder="Contact me"></textarea>
                         </label>
                         <button className="submit-button" type="submit">Send</button>
-                        <input className="reset" type="reset" value="Whoopsy!" />
+                        <input className="reset" type="reset" value="Reset" />
                     </form>
                 </div>
             </ContactPageStyles>            
