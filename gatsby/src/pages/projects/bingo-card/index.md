@@ -3,17 +3,13 @@ path: '/bingo-card'
 title: 'My bingo card!'
 summary: 'A bingo card I made'
 project: true
-url: 'test'
+url: 'https://j-fink.github.io/bingo-card/'
+repo: 'https://github.com/J-Fink/bingo-card'
 # containsImage: false
 # featuredImage: test.png
 ---
 
-Yes, a bingo card.\
+Yes, a **bingo card**.\
 \
-There are two ways to look at what a server is:
-* The physical computer, whether it is offsite somewhere, or the computer you are writing code on.
-* The software (computer program) that does SOMETHING (i.e. serves)
-
-A **physical server** is a specialized computer that is made for the long haul. Think of commercial grade versus home owner grade. 
-
+A card you can use to play bingo anywhere, anytime.
 
