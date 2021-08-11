@@ -96,7 +96,7 @@ const PostStyles = styled.div`
     .post-title-container {
         box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
         background-color: var(--postTitleColor);
-        height: 10vh;
+        height: fit-content;
         line-height: 10vh;
         width: fit-content;
         margin: 25px auto;
