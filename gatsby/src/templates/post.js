@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import BasicPageStyles from '../styles/BasicPageStyles';
 import { BiLinkExternal } from 'react-icons/bi'
 
-import Img from 'gatsby-image';
+
 import styled from 'styled-components';
 
 const ViewOutsideContentStyles = styled.div`
@@ -130,7 +130,6 @@ const PostStyles = styled.div`
 export default function Template({ data }) {
     const { markdownRemark: post } = data;
     //the above is equal to const post = data.markdownRemark;
-    // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
     return (
         <BasicPageStyles>
             <PostStyles>
@@ -148,7 +147,6 @@ export default function Template({ data }) {
                 
                 </div>
                 
-                {/* <Img fluid={featuredImgFluid} /> */}
                 <div dangerouslySetInnerHTML={{__html: post.html}}/>
             </PostStyles>
         </BasicPageStyles>

@@ -11,6 +11,7 @@ const ContactPageStyles = styled.div`
     border-radius: 5px;
     margin: auto;
     margin-top: 15px;
+    min-height: 390px;
     .container {
         text-align: center;
     }

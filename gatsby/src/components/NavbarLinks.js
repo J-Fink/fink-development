@@ -23,7 +23,7 @@ const NavItem = styled(Link)`
     height: 1px;
     transition: all 0.25s ease-in-out;
   }
-:hover {
+:hover,:focus {
     color: var(--navTextHoverColor);
     ::after {
         width: var(--navUnderlineWidth);

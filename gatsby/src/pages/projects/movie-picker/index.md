@@ -9,7 +9,6 @@ repo: 'https://github.com/J-Fink/movie-picker'
 # featuredImage: test.png
 ---
 
-It's a struggle choosing a movie. Why not have a computer choose one for you?.\
-\
+It's a struggle choosing a movie. Why not have a computer choose one for you?.
 
 
