@@ -1,10 +1,8 @@
 import React from 'react';
-// import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
-import { Link } from 'gatsby';
 import BasicPageStyles from '../styles/BasicPageStyles';
-// import BackgroundImage from 'gatsby-background-image';
+
 
 const HeroStyles = styled.div`
     margin: 0;
@@ -148,9 +146,6 @@ const HeroStyles = styled.div`
     `;
 
 export default function Hero() {
-    // console.log(Link);
-    let string = '&lt;'
-    let newString = '&lt;';
     return (
         <BasicPageStyles>
     <HeroStyles>

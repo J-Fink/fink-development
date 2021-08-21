@@ -3,7 +3,6 @@ import BasicPageStyles from '../styles/BasicPageStyles';
 import SEO from '../components/SEO.js';
 import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
 
 const BlogGrid = styled.div`
     display: grid;
