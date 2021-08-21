@@ -94,7 +94,7 @@ export default function AboutPage() {
                     <span className="flex-container">
                         <p>
                             Hi, I'm Joe!<br />
-                            I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota<br />
+                            I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota.<br />
                         </p>
                     <StaticImage
                         imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
@@ -110,16 +110,15 @@ export default function AboutPage() {
                     
                     
                     <p>
-                        I work for a nonprofit organization where I wear many hats. From maintaining our website(built with Drupal 7), managing livestreaming our services, to all around logistics. I believe having a smooth workflow makes life easier, at the same time I find it helpful to figure out the desired outcome first then find a path to achieve that outcome. In my free time I make websites, and like to use my new found skills to help nonprofit organizations.
+                        I work for a nonprofit organization, so I wear many hats. Working well in a team environment has been an important part of my work, along with writing internal documentation for our workflow. In my free time I make websites, and like to use my new found skills to help nonprofit organizations.
                     </p>
                     
                     <p>
                         I started to learn how to program in August of 2019. There has been so much I have learned so far(and yet still so much more!), you can check out my GitHub <a href="https://github.com/J-Fink" rel="noreferrer nofollow">here</a>.
                     </p>
                     <p>
-                        I have a lot of interests, when the COVID set in I picked up another hobby. My kids love it
+                        I like to make food: bread baking, smoking (ribs, chicken, brisket, cheez-its, cheesecakes, if it's edible, it's liable to go in the smoker). In August of 2021 I picked up a new food. My kids love this one!
                     </p>
-                    
                     <StaticImage
                     imgClassName="mobile-image"//this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
                     alt="Joe holds a giant cone of cotton candy"
