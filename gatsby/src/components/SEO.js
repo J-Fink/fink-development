@@ -21,6 +21,7 @@ export default function SEO({ children, location, description, title, image }) {
             {/* Fav Icons */}
             <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
             <link rel="alternate icon" href="/favicon-light.png" />
+            <link rel="preload" href="../assets/images/logo-hover.svg" />
             {/* Meta Tags */}
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta charSet="utf-8" />
