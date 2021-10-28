@@ -150,8 +150,9 @@ export default function Hero() {
         <BasicPageStyles>
     <HeroStyles>
         <div className="monitor-stand">
-            <div className="monitor">
-        <Typewriter onInit = {(typewriter) => {
+            <div className="monitor"><iframe src="https://www.joefink.dev" className="Typewriter"><span class="code" id="printed-container"></span></iframe>
+       {/* <Typewriter
+        onInit = {(typewriter) => {
             typewriter.changeDelay(1).typeString(`
 <span id="printed-container" class="code">
 &lt;<span class="tag-highlight">div </span><span class="attribute-name">class</span>=<span class="string">"NavbarLinks__MenuContainer"</span>&gt;
@@ -162,7 +163,8 @@ export default function Hero() {
 </span>
             
         `).start();
-        }} />
+        }}
+         /> */}
             </div>
         </div>
     </HeroStyles> 
