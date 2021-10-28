@@ -8,8 +8,8 @@
         "gatsby"
     ],
     "scripts": {
-        "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -H 0.0.0.0",
-        "start": "npm run develop",
+        "dev": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -H 0.0.0.0",
+        "start": "npm run dev",
         "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
         "serve": "cross-env NODE_OPTIONS=\"-r esm\"gatsby serve",
         "clean": "gatsby clean"
