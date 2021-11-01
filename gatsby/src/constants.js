@@ -1,7 +1,7 @@
 export const COLORS = {
     navColor: {
-      light: '#ffc600', 
-      dark: 'rgba(25, 53, 73, 1)',
+      light: 'rgba(255, 198, 0, 0.95)', 
+      dark: 'rgba(25, 53, 73, 0.95)',
     },
     // navHoverColor: {
     //   light: 'blue',
