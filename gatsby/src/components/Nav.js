@@ -79,15 +79,21 @@ const NavStyles = styled.header`
     width: 100%;
     height: var(--headerHeight);
     display: flex;
-    background: var(--navColor);
+    /* background: none; */
     position: fixed;
     justify-content: space-between;
     text-transform: uppercase;
-    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
-    
+    transition: all 0.5s;
     /* margin: 0 auto; */
     z-index: 3;
     align-self: center;
+    
+    &.scrolled {
+      transition: all 0.5s;
+      background: var(--navColor);
+      box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+      /* background: green; */
+    }
     
     @media (max-width: 770px) {
         /* touch-action: none; */
@@ -104,9 +110,29 @@ const NavStyles = styled.header`
 
 export default function Nav() {
   const [menuState, setMenuState] = useState(false);
+  
+  //page is scrolled when scrollState is active
+  const [scrollState, setScrollState] = useState(false);
+  
+  //function to handle scrolling, in my case change the background color
+  const handleScroll = () => {
+    //headerHeight as a number, remove parseInt to have unit label i.e. px
+    let headerHeight = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--headerHeight'))
+    console.log(window.scrollY);
+    console.log(headerHeight);
+
+    if(window.scrollY >= headerHeight){
+      setScrollState(true);
+    } else {
+      setScrollState(false);
+    }
+  }
   useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
     let root = document.documentElement;
     let body = document.body;
+    
     if(menuState) {
       root.style.setProperty('--htmlOverflow', 'hidden');
       body.style.setProperty('--htmlOverflow', 'visible');
@@ -128,7 +154,7 @@ export default function Nav() {
 
   }, [menuState])
     return (
-        <NavStyles >
+        <NavStyles className={scrollState ? "scrolled" : ""}>
           {/* <div className="nav__container">
           </div> */}
             <Link to="/" onClick={() => menuState ? setMenuState(!menuState) : ''}>
