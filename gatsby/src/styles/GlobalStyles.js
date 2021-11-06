@@ -29,6 +29,10 @@ const GlobalStyles = createGlobalStyle`
         color: var(--textColor);
         background-attachment: fixed; //this keeps the background fixed 
     }
+    .emphasis {
+        font-style: italic;
+        background: var(--navColor);
+    }
     @media (max-width: 768px) {
 
         html.noscroll {
