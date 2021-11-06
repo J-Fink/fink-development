@@ -86,8 +86,8 @@ export default function ProjectsPage({ data }) {
                                         </div>
                                 </ProjectsGridItem>
                                 )
-                             return ""
                             }
+                            return ""
                         })}
                     </ProjectsGrid>
                 </ProjectsStyles>

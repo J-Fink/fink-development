@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 
 
-const AboutStyles = styled.div`
+export const AboutStyles = styled.div`
     text-align: center;
     /* --imageHeight: 400px;
     --imageWidth: 400px; */
