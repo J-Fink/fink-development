@@ -3,7 +3,7 @@ import BasicPageStyles from '../styles/BasicPageStyles';
 import styled from 'styled-components';
 
 const ContactPageStyles = styled.div`
-    border: 2px solid black;
+    border: 1px solid rgb(0 0 0 / 39%);
     text-align: center;
     width: 50vw;
     height: 65vh;
@@ -12,6 +12,7 @@ const ContactPageStyles = styled.div`
     margin: auto;
     margin-top: 15px;
     min-height: 390px;
+    box-shadow: 0em 0em 8em -1em;
     .container {
         text-align: center;
     }
@@ -43,6 +44,7 @@ const ContactPageStyles = styled.div`
         text-align: center;
     }
     label input {
+        border: 1px solid;
         border-radius: 5px;
         height: 25px;
         width: 45vw;
@@ -50,6 +52,9 @@ const ContactPageStyles = styled.div`
     label:nth-child(3) {
         padding-top: 35px;
         /* background-color: blue; */
+    }
+    label textarea {
+        border: 1px solid;
     }
     textarea {
         border-radius: 5px;
