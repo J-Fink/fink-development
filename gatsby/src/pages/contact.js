@@ -44,7 +44,7 @@ const ContactPageStyles = styled.div`
         text-align: center;
     }
     label input {
-        border: 1px solid;
+        border: 1px solid rgb(0 0 0 / 39%);
         border-radius: 5px;
         height: 25px;
         width: 45vw;
@@ -54,7 +54,7 @@ const ContactPageStyles = styled.div`
         /* background-color: blue; */
     }
     label textarea {
-        border: 1px solid;
+        border: 1px solid rgb(0 0 0 / 39%);
     }
     textarea {
         border-radius: 5px;
