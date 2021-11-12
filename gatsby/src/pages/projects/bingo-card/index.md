@@ -6,6 +6,7 @@ project: true
 url: 'https://j-fink.github.io/bingo-card/'
 repo: 'https://github.com/J-Fink/bingo-card'
 previewImage: 'bingoPreview.jpg'
+previewImageAlt: 'preview of the finished project, a bingo card.'
 # containsImage: false
 # featuredImage: test.png
 ---
