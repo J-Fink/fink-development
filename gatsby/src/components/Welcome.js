@@ -88,11 +88,14 @@ export default function Welcome() {
                     <StaticImage
                     imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
                     alt="Joe smiles a welcoming smile"
-                    src="../assets/images/joeWelcome.jpg"
+                    src="../assets/images/joeBW.jpg"
                     placeholder="traced SVG"
                     layout="constrained"
+                    transformOptions={{cropFocus: 'entropy'}}
                     width={400}
                     height={400}
+                    // cropFocus='NORTH'
+                    // imgStyle={{ objectFit: 'contain'}}
                     // aspectRatio={16/9}
                     />
                 </span>
