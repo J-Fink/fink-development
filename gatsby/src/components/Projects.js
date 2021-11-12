@@ -1,7 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
+
 
 const ProjectsContainer = styled.div`
     display: grid;
@@ -74,11 +76,10 @@ export default function Projects() {
                     repo
                     previewImage {
                         childImageSharp {
-                            fluid {
-                                ...GatsbyImageSharpFluid
-                            }
+                            gatsbyImageData
                         }
                     }
+                    previewImageAlt
                 }
             }
         }
@@ -91,7 +92,7 @@ export default function Projects() {
     return (
         <>
         <ProjectsContainer>
-            <Img src="src\assets\images\joeFromTheSide.jpg" />
+            {/* <Img src="src\assets\images\joeFromTheSide.jpg" /> */}
                 
                 {data.allMarkdownRemark.edges.map((project) => {
         console.log(project.node.frontmatter);
@@ -99,8 +100,8 @@ export default function Projects() {
                         return(
                             <ProjectItem>
                                 {project.node.frontmatter.previewImage ?
-                                <Img
-                                src="/static/812a3469db8dfe3071203f4ad293aadb/14b42/bingoPreview.jpg"
+                                <GatsbyImage
+                                image={project.node.frontmatter.previewImage.childImageSharp.gatsbyImageData}
                                 alt={project.node.frontmatter.title}
                                 />
                                 
