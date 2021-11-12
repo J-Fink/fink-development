@@ -18,6 +18,12 @@ display: grid;
 grid-template-rows: 4% 1fr;
 grid-gap: 0rem;
 justify-content: center;
+.projectPreviewImage{
+    height: fit-content;
+}
+.projectPreviewImage.gatsby-image-wrapper {
+    border-radius: 0;
+}
 .description {
         font-style: italic;
         max-width: 250px;
@@ -100,7 +106,7 @@ export default function Projects() {
                         return(
                             <ProjectItem>
                                 {project.node.frontmatter.previewImage ?
-                                <GatsbyImage
+                                <GatsbyImage className='projectPreviewImage'
                                 image={project.node.frontmatter.previewImage.childImageSharp.gatsbyImageData}
                                 alt={project.node.frontmatter.title}
                                 />
