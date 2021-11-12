@@ -5,6 +5,7 @@ summary: 'A bingo card I made'
 project: true
 url: 'https://j-fink.github.io/bingo-card/'
 repo: 'https://github.com/J-Fink/bingo-card'
+previewImage: 'bingoPreview.jpg'
 # containsImage: false
 # featuredImage: test.png
 ---
