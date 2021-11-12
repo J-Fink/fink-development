@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const ProjectsContainer = styled.div`
     display: grid;
@@ -56,9 +57,10 @@ justify-content: center;
 
 `;
 
+
 export default function Projects() {
-    const data = useStaticQuery(graphql`
-    query {
+  const data = useStaticQuery(graphql`
+      query {
     allMarkdownRemark(limit: 10) {
         edges {
             node {
@@ -70,22 +72,40 @@ export default function Projects() {
                     project
                     url
                     repo
+                    previewImage {
+                        childImageSharp {
+                            fluid {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
                 }
             }
         }
 }
 }
-    `)
-    console.log(`this is the data ${data}`);
-    // let projectsArray = data.allMarkdownRemark.edges;
-
+  `)
+    console.log(data);
+  
+  // let projectsArray = data.allMarkdownRemark.edges;
     return (
         <>
         <ProjectsContainer>
+            <Img src="src\assets\images\joeFromTheSide.jpg" />
+                
                 {data.allMarkdownRemark.edges.map((project) => {
+        console.log(project.node.frontmatter);
                     if(project.node.frontmatter.project){
                         return(
                             <ProjectItem>
+                                {project.node.frontmatter.previewImage ?
+                                <Img
+                                src="/static/812a3469db8dfe3071203f4ad293aadb/14b42/bingoPreview.jpg"
+                                alt={project.node.frontmatter.title}
+                                />
+                                
+                                : ''
+                            }
                                 <Link
                                 key={project.node.id}
                                 to={project.node.frontmatter.path}>
@@ -104,4 +124,3 @@ export default function Projects() {
 </>
     );
 };
-
