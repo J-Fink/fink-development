@@ -18,7 +18,7 @@ const TechItem = styled.div`
 export default function Technologies() {
     let technologiesArray = [
         {name:'Git'},
-        {name:'GitHug'},
+        {name:'GitHub'},
         {name:'VS Code'},
         {name:'React'},
         {name:'CSS'},
