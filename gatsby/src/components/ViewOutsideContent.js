@@ -1,8 +1,62 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BiLinkExternal } from 'react-icons/bi';
+import { Link } from 'gatsby';
 
-const ViewOutsideContentStyles = styled.div`
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: var(--navTextColor);
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 1vw;
+    position: relative;
+        :after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        content: "";
+        color: transparent;
+        background: var(--navTextHoverColor);
+        height: 3px;
+        transition: all 0.25s ease-in-out;
+    }
+    :hover, :focus {
+        /* color: var(--navTextHoverColor); */
+        ::after {
+            width: var(--navUnderlineWidth);
+        }
+    }
+`;
+export const StyledAnchor = styled.a`
+            text-decoration: none;
+            color: var(--navTextColor);
+            display: inline-block;
+            white-space: nowrap;
+            margin: 0 1vw;
+            position: relative;
+            
+            :after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 0%;
+                content: "";
+                color: transparent;
+                background: var(--navTextHoverColor);
+                height: 3px;
+                transition: all 0.25s ease-in-out;
+            }
+            :hover, :focus {
+                /* color: var(--navTextHoverColor); */
+                ::after {
+                    width: var(--navUnderlineWidth);
+                }
+            }
+`;
+export const ViewOutsideContentStyles = styled.div`
     
         box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
         background-color: var(--postTitleColor);
@@ -24,41 +78,15 @@ const ViewOutsideContentStyles = styled.div`
             transform: skew(calc(-1 * var(--postTitleSkew)));
             position: relative;
         }
-        a {
-            text-decoration: none;
-            color: var(--navTextColor);
-            display: inline-block;
-            white-space: nowrap;
-            margin: 0 1vw;
-            position: relative;
-            /* background-color: purple; */
-            :after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 0%;
-            content: "";
-            color: transparent;
-            background: var(--navTextHoverColor);
-            height: 3px;
-            transition: all 0.25s ease-in-out;
-        }
-            :hover {
-                /* color: var(--navTextHoverColor); */
-                ::after {
-                    width: var(--navUnderlineWidth);
-                }
-            }
-}
+        
 `;
 export default function ViewOutsideContent({ message, href, rel, target }) {
     return (
         <ViewOutsideContentStyles>
-            <a href={href} rel={rel} target={target}>
+            <StyledAnchor href={href} rel={rel} target={target}>
                 <span>{message}</span>
                 <BiLinkExternal size="15" /> 
-            </a>
+            </StyledAnchor>
         </ViewOutsideContentStyles>
     )
 };
