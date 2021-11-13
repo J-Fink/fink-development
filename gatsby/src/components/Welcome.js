@@ -8,7 +8,7 @@ import Projects from './Projects';
 import Technologies from './Technologies';
 
 const WelcomeStyles = styled.div`
-    
+    position: relative;
     text-align: center;
     line-height: 2.5rem;
     width: 100vw;
@@ -24,9 +24,83 @@ const WelcomeStyles = styled.div`
         padding: 0 50px;
         margin: auto auto 25px auto;
     }
+    @keyframes slideInAnimation {
+        0% {
+            height: 0;
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            height: 100;
+            opacity: 1;
+        }
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .divider {
+        display:inline-block;
+        position: relative;
+        /* background:blue; */
+        /* box-shadow: var(--boxShadow); */
+        /* transform: skew(var(--postTitleSkew)); */
+        width: 100vw;
+        height: 50px;
+        /* span:nth-child(1), span:nth-child(2) {
+            animation: fadeInAnimation ease 2s;
+        } */
+        span:nth-child(1) {
+        mix-blend-mode: normal;
+        display: inline-block;
+        position: relative;
+        width: 100vw;
+        height: 40px;
+        transform: skewY(-1deg) translateY(1px);
+        background: var(--navBoxBackgroundColor);
+        
+    }
+    span:nth-child(2) {
+        mix-blend-mode: normal;
+        display: inline-block;
+        position: relative;
+        width: 100vw;
+        height: 68px;
+        transform: translateY(-20px);
+        background: var(--navBoxBackgroundColor);
+
+    }
+    }
+    //TO-DO work on setting the animations to start at different times
+    .welcome-section {
+        animation: slideInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        transition: opacity 4s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 79vh;
+
+        .flex-container {
+            /* margin-bottom: 280px; */
+        }
+        h1 {
+            margin-bottom: 55px;
+        }
+    }
     .flex-container {
         background: var(--welcomeBackgroundColor);
         color: var(--textColorHover);
+        box-shadow: var(--boxShadow);
         width: 68vw;
         max-width: 800px;
 
@@ -91,6 +165,7 @@ export default function Welcome() {
     return (
         <BasicPageStyles>
             <WelcomeStyles>
+            <section className="welcome-section">
                 <h1>WELCOME!</h1>
                 <span className="flex-container">
                     <p>Hello, my name is Joe and I'm glad you're here!<br/>
@@ -109,16 +184,21 @@ export default function Welcome() {
                     // aspectRatio={16/9}
                     />
                 </span>
-                <section>
-                    <h2>Skills and Technologies</h2>
-                    <p>Troubleshooting and research (i.e. GOOGLING) are skills I use EVERYDAY. Tools I've been using include:
-                    </p>
-                    <Technologies />    
-                </section>
-                <section>
-                    <h2>What I've Been Up To</h2>
-                    <Projects />
-                </section>
+            </section>
+            <div className="divider">
+                <span></span>
+                <span></span>
+            </div>
+            <section>
+                <h2>Skills and Technologies</h2>
+                <p>Troubleshooting and research (i.e. GOOGLING) are skills I use EVERYDAY. Tools I've been using include:
+                </p>
+                <Technologies />    
+            </section>
+            <section>
+                <h2>What I've Been Up To</h2>
+                <Projects />
+            </section>
             </WelcomeStyles>
         </BasicPageStyles>
     )

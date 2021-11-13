@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
     :root {
-    
+    --boxShadow: rgb(0 0 0 / 20%) 2px 2px 3px;
     --blue: rgba(25, 53, 73, 1); //#193549; 
     --tag-highlight: #9EFFFF; //baby blue
     --attribute-name:#FFC600; //orange-ish

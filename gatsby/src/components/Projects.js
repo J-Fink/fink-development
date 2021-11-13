@@ -2,20 +2,30 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import ViewOutsideContent, { StyledLink, ViewOutsideContentStyles } from './ViewOutsideContent';
 
 
 
 const ProjectsContainer = styled.div`
     display: grid;
+    grid-gap: 25px;
     text-align: center;
     grid-template-columns: 1fr 1fr;
     max-width: 800px;
     margin: auto;
+    .externalLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 `;
 
 const ProjectItem = styled.div`
+background: var(--welcomeBackgroundColor);
+box-shadow: var(--boxShadow);
+padding: 10px;
+border-radius: 10px;
 display: grid;  
-grid-template-rows: 4% 1fr;
+grid-template-rows: 1fr;
 grid-gap: 0rem;
 justify-content: center;
 .projectPreviewImage{
@@ -29,40 +39,6 @@ justify-content: center;
         max-width: 250px;
         margin: 35px auto auto auto;
     }
-    a {
-        text-decoration: none;
-        color: var(--textColor);
-        height: fit-content;
-        margin: 0 auto;
-        box-shadow: rgb(0 0 0 / 20%) 2px 2px 3px;
-        transform: skew(var(--postTitleSkew));
-        background-color: var(--postTitleColor);
-        :after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 0%;
-            content: "";
-            color: transparent;
-            background: var(--navTextHoverColor);
-            height: 3px;
-            transition: all 0.25s ease-in-out;
-        }
-        span {
-            display: inline-block; //must add this or the below transform won't work
-            transform: skew(calc(-1 * var(--postTitleSkew)));
-            padding: 5px 10px;
-        }
-    }
-    a:hover, :focus {
-        /* color: var(--textColorHover); */
-        color: white;
-        ::after {
-        width: var(--navUnderlineWidth);
-    }
-    }
-
 `;
 
 
@@ -113,14 +89,24 @@ export default function Projects() {
                                 
                                 : ''
                             }
-                                <Link
-                                key={project.node.id}
-                                to={project.node.frontmatter.path}>
-                                    <span>{project.node.frontmatter.title}</span>
-                                </Link>
+                                
+
+                                <ViewOutsideContentStyles>
+                                    <StyledLink
+                                    key={project.node.id}
+                                    to={project.node.frontmatter.path}>
+                                        <span>{project.node.frontmatter.title}</span>
+                                    </StyledLink>
+                                </ViewOutsideContentStyles>
                                 <div className="description">
                                     {project.node.frontmatter.summary}
                                 </div>
+                                <span className="externalLinks">
+                                    <ViewOutsideContent
+                                    href={project.node.frontmatter.repo} message="View Repo" target="_blank" rel="nofollow noopener" />
+                                    <ViewOutsideContent 
+                                    href={project.node.frontmatter.url} message="View Live Project" target="_blank" rel="nofollow noopener"  />
+                                </span>
                             </ProjectItem>
                         )
                     }
