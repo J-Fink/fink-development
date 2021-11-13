@@ -51,6 +51,10 @@ export const COLORS = {
       light: 'Roboto, Sans-Serif', // roboto
       dark: 'monospace', // 'monospace'
     },
+    welcomeBackgroundColor: {
+      light: 'rgba(0, 0, 0, 0.45)',
+      dark: 'rgba(255, 255, 255, 0.45)',
+    },
     backgroundColor: {
       light: 'white',
       dark: 'black',

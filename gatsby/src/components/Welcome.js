@@ -8,6 +8,7 @@ import Projects from './Projects';
 import Technologies from './Technologies';
 
 const WelcomeStyles = styled.div`
+    
     text-align: center;
     line-height: 2.5rem;
     width: 100vw;
@@ -24,12 +25,21 @@ const WelcomeStyles = styled.div`
         margin: auto auto 25px auto;
     }
     .flex-container {
+        background: var(--welcomeBackgroundColor);
+        color: var(--textColorHover);
+        width: 68vw;
+        max-width: 800px;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        margin-left: 15px;
-        margin-right: 15px;
+        /* margin-left: 15px; */
+        margin-right: auto;
+        margin-left: auto;
         margin-bottom: 25px;
         p {
             margin: 0 0 25px 0;
