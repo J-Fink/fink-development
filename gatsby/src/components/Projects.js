@@ -28,6 +28,9 @@ display: grid;
 grid-template-rows: 1fr;
 grid-gap: 0rem;
 justify-content: center;
+.title {
+    font-size: 15px;
+}
 .projectPreviewImage{
     height: fit-content;
 }
@@ -92,7 +95,7 @@ export default function Projects() {
                                 
 
                                 <ViewOutsideContentStyles>
-                                    <StyledLink
+                                    <StyledLink className="title"
                                     key={project.node.id}
                                     to={project.node.frontmatter.path}>
                                         <span>{project.node.frontmatter.title}</span>

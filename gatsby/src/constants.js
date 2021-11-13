@@ -96,8 +96,10 @@ export const COLORS = {
       dark: '0 0 17px #fff',
     },
     postTitleColor: {
-      light: 'rgb(255 198 0 / 23%)',
-      dark: 'rgb(25 53 73 / 23%)',
+      light: 'rgb(255 198 0 / 100%)',
+      // light: 'rgb(255 198 0 / 23%)',
+      dark: 'rgb(25 53 73 / 100%)',
+      // dark: 'rgb(25 53 73 / 23%)',
     },
     anchorTextHoverColor: {
       light: 'white',
