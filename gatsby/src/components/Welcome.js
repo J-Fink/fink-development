@@ -12,11 +12,11 @@ const WelcomeStyles = styled.div`
     text-align: center;
     line-height: 2.5rem;
     width: 100%;
-    --avatarImgHeight: 100%;
-    --avatarImgWidth: 100%;
     --introTop: -483px;
     --introLeft: 145px;
     --h1Top: -445px;
+    --avatarWidth: 300px;
+    --avatarHeight: 300px;
     p {
         overflow-wrap: anywhere;
         max-width: 1200px;
@@ -83,6 +83,8 @@ const WelcomeStyles = styled.div`
     //TO-DO work on setting the animations to start at different times
     .welcome-container {
         height: 100vh;
+        width: 100%;
+        display: inline-block;
     }
     .welcome-section {
         animation: slideInAnimation ease 1.5s;
@@ -102,7 +104,7 @@ const WelcomeStyles = styled.div`
         background: var(--welcomeBackgroundColor);
         color: var(--textColorHover);
         box-shadow: var(--boxShadow);
-        width: 68vw;
+        /* width: 68vw; */
         max-width: 800px;
 
         /* padding-top: 15px;
@@ -116,21 +118,24 @@ const WelcomeStyles = styled.div`
         /* margin-left: 15px; */
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 25px;
+        /* margin-bottom: 25px; */
         p {
             margin: 0 0 25px 0;
-            max-width: 400px;
+            max-width: 368px;
             text-align: left;
         }
     }
     
     .mobile-image { //allows me to target the actual img tag so the round circle shows up on mobile
         border-radius:50%;
+        height: var(--avatarImgHeight);
+        width: var(--avatarImgWidth);
     }
     .gatsby-image-wrapper {
+        height: var(--avatarImgHeight);
+        width: var(--avatarImgWidth);
         border-radius: 50%;
         margin: 15px;
-
     }
     
     h1 {
@@ -139,16 +144,30 @@ const WelcomeStyles = styled.div`
       margin: 45px auto 0 auto;
       line-height: normal;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
+        --avatarImgHeight: 300px;
+        --avatarImgWidth: 300px;
+        .welcome-section h1 {
+            font-size: 11.5vw;
+        }
+        .mobile-image {
+            aspect-ratio: auto;
+            height: var(--avatarImgHeight);
+            width: var(--avatarImgWidth);
+        }
         .gatsby-image-wrapper {
+            aspect-ratio: auto;
             margin-left: 25px;
             margin-right: 25px;
+            height: var(--avatarImgHeight);
+            width: var(--avatarImgWidth);
         }
         .flex-container {
             flex-direction: column;
-            width: 100%;
+            width: 75%;
             p {
                 margin-bottom: 25px;
+                margin-top: 25px;
             }
         }
     }
@@ -162,6 +181,16 @@ const WelcomeStyles = styled.div`
     p a:hover {
         color: var(--anchorTextHoverColor); /*var(--navTextHoverColor);*/
         text-decoration: underline;
+    }
+    @media (max-width: 440px) {
+        --avatarImgHeight: 75vw;
+        --avatarImgWidth: 75vw;
+        .welcome-section h1 {
+            margin-bottom: 0;
+        }
+        .flex-container {
+            width: 100%;
+        }
     }
   @media (hover: none) {//on mobile where there is no hover, this makes it so the color doesn't change on click and get stuck in the 'hover' state
     p a:hover {
@@ -186,18 +215,18 @@ export default function Welcome() {
                         placeholder="traced SVG"
                         layout="constrained"
                         transformOptions={{cropFocus: 'entropy'}}
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                         // cropFocus='NORTH'
                         // imgStyle={{ objectFit: 'contain'}}
                         // aspectRatio={16/9}
                         />
                     </span>
                 </section>
-            <div className="divider">
+            {/* <div className="divider">
                 <span></span>
                 <span></span>
-            </div>
+            </div> */}
             </span>
             <section>
                 <h2>Skills and Technologies</h2>
