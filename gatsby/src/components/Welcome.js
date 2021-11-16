@@ -149,6 +149,7 @@ const WelcomeStyles = styled.div`
         --avatarImgWidth: 300px;
         .welcome-section h1 {
             font-size: 11.5vw;
+            margin-bottom: 12px;
         }
         .mobile-image {
             aspect-ratio: auto;
@@ -185,6 +186,8 @@ const WelcomeStyles = styled.div`
     @media (max-width: 440px) {
         --avatarImgHeight: 75vw;
         --avatarImgWidth: 75vw;
+        --TechContainerColumns: 1fr 1fr;
+        --TechContainerGridGap: 12px;
         .welcome-section h1 {
             margin-bottom: 0;
         }

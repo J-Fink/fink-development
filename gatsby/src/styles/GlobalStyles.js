@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
     --htmlOverflow: visible;
     --bodyOverflow: hidden;
     --bodyHeight: auto;
+    --TechContainerColumns: 1fr 1fr 1fr 1fr 1fr;
+    --TechContainerGridGap: 2px;
     overflow-x: hidden;
     margin: 0;
     padding: 0;

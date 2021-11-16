@@ -5,8 +5,9 @@ import styled from 'styled-components';
 const TechContainer = styled.div`
     display: grid;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: var(--TechContainerColumns);
     max-width: 800px;
+    grid-gap: var(--TechContainerGridGap);
     margin: auto;
 `;
 
