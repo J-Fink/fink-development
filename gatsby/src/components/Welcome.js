@@ -11,7 +11,7 @@ const WelcomeStyles = styled.div`
     position: relative;
     text-align: center;
     line-height: 2.5rem;
-    width: 100vw;
+    width: 100%;
     --avatarImgHeight: 100%;
     --avatarImgWidth: 100%;
     --introTop: -483px;
@@ -54,7 +54,7 @@ const WelcomeStyles = styled.div`
         /* background:blue; */
         /* box-shadow: var(--boxShadow); */
         /* transform: skew(var(--postTitleSkew)); */
-        width: 100vw;
+        width: 100%;
         height: 50px;
         /* span:nth-child(1), span:nth-child(2) {
             animation: fadeInAnimation ease 2s;
@@ -63,7 +63,7 @@ const WelcomeStyles = styled.div`
         mix-blend-mode: normal;
         display: inline-block;
         position: relative;
-        width: 100vw;
+        width: 100%;
         height: 40px;
         transform: skewY(-1deg) translateY(1px);
         background: var(--navBoxBackgroundColor);
@@ -73,7 +73,7 @@ const WelcomeStyles = styled.div`
         mix-blend-mode: normal;
         display: inline-block;
         position: relative;
-        width: 100vw;
+        width: 100%;
         height: 68px;
         transform: translateY(-20px);
         background: var(--navBoxBackgroundColor);
@@ -81,6 +81,9 @@ const WelcomeStyles = styled.div`
     }
     }
     //TO-DO work on setting the animations to start at different times
+    .welcome-container {
+        height: 100vh;
+    }
     .welcome-section {
         animation: slideInAnimation ease 1.5s;
         animation-iteration-count: 1;
@@ -90,9 +93,7 @@ const WelcomeStyles = styled.div`
         justify-content: center;
         height: 79vh;
 
-        .flex-container {
-            /* margin-bottom: 280px; */
-        }
+        
         h1 {
             margin-bottom: 55px;
         }
@@ -104,9 +105,10 @@ const WelcomeStyles = styled.div`
         width: 68vw;
         max-width: 800px;
 
-        padding-top: 15px;
+        /* padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 15px;
+        right: 15px; */
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
@@ -127,6 +129,7 @@ const WelcomeStyles = styled.div`
     }
     .gatsby-image-wrapper {
         border-radius: 50%;
+        margin: 15px;
 
     }
     
@@ -137,8 +140,13 @@ const WelcomeStyles = styled.div`
       line-height: normal;
     }
     @media (max-width: 500px) {
+        .gatsby-image-wrapper {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
         .flex-container {
             flex-direction: column;
+            width: 100%;
             p {
                 margin-bottom: 25px;
             }
@@ -165,30 +173,32 @@ export default function Welcome() {
     return (
         <BasicPageStyles>
             <WelcomeStyles>
-            <section className="welcome-section">
-                <h1>WELCOME!</h1>
-                <span className="flex-container">
-                    <p>Hello, my name is Joe and I'm glad you're here!<br/>
-                    I'm a husband, a dad, and a web developer. In 2019 I started intentionally spending time learning how to program and figure out this mystery that is <span className="emphasis">technology</span>. Learn more about my journey <Link to="/about">HERE</Link></p>
-                    <StaticImage
-                    imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
-                    alt="Joe smiles a welcoming smile"
-                    src="../assets/images/joeBW.jpg"
-                    placeholder="traced SVG"
-                    layout="constrained"
-                    transformOptions={{cropFocus: 'entropy'}}
-                    width={400}
-                    height={400}
-                    // cropFocus='NORTH'
-                    // imgStyle={{ objectFit: 'contain'}}
-                    // aspectRatio={16/9}
-                    />
-                </span>
-            </section>
+            <span className="welcome-container">
+                <section className="welcome-section">
+                    <h1>WELCOME!</h1>
+                    <span className="flex-container">
+                        <p>Hello, my name is Joe and I'm glad you're here!<br/>
+                        I'm a husband, a dad, and a web developer. In 2019 I started intentionally spending time learning how to program and figure out this mystery that is <span className="emphasis">technology</span>. Learn more about my journey <Link to="/about">HERE</Link></p>
+                        <StaticImage
+                        imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
+                        alt="Joe smiles a welcoming smile"
+                        src="../assets/images/joeBW.jpg"
+                        placeholder="traced SVG"
+                        layout="constrained"
+                        transformOptions={{cropFocus: 'entropy'}}
+                        width={400}
+                        height={400}
+                        // cropFocus='NORTH'
+                        // imgStyle={{ objectFit: 'contain'}}
+                        // aspectRatio={16/9}
+                        />
+                    </span>
+                </section>
             <div className="divider">
                 <span></span>
                 <span></span>
             </div>
+            </span>
             <section>
                 <h2>Skills and Technologies</h2>
                 <p>Troubleshooting and research (i.e. GOOGLING) are skills I use EVERYDAY. Tools I've been using include:

@@ -17,6 +17,13 @@ const ProjectsContainer = styled.div`
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    @media(max-width: 875px) {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        /* ${ProjectItem} {
+            margin: 40px;
+        } */
+    }
 `;
 
 const ProjectItem = styled.div`

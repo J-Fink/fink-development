@@ -13,17 +13,21 @@ const GlobalStyles = createGlobalStyle`
     --bodyOverflow: hidden;
     --bodyHeight: auto;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     }
     html {
         font-size: 10px;
         font-family: var(--fontFamily);
         overflow: var(--htmlOverflow);
+        /* overflow-y: scroll; */
         /* min-height: 100vh; */
     }
     body {
-        min-height: 100vh;
-        width: 100vw;
         margin: 0;
+        min-height: 100vh;
+        max-width: 100%;
         background: var(--heroBackground);
         /* background-repeat: repeat; */
         color: var(--textColor);
