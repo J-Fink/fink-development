@@ -13,7 +13,7 @@ export const AboutStyles = styled.div`
     /* --imageHeight: 400px;
     --imageWidth: 400px; */
     line-height: 2.5rem;
-    width: 100vw;
+    width: 100%;
     --avatarImgHeight: 100%;
     --avatarImgWidth: 100%;
     /* --avatarImgLeft: -58vw; */
