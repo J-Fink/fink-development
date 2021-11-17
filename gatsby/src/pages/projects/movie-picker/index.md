@@ -1,6 +1,6 @@
 ---
 path: '/movie-picker'
-title: 'Pick a movie, any movie!'
+title: 'MOVIE PICKER'
 summary: 'My fullstack web app that helps you pick a movie'
 project: true
 url: 'https://www.moviealternatives.com'

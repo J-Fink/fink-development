@@ -1,6 +1,6 @@
 ---
 path: '/bingo-card'
-title: 'My bingo card!'
+title: 'BINGO CARD'
 summary: 'A bingo card I made'
 project: true
 url: 'https://j-fink.github.io/bingo-card/'
