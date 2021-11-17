@@ -48,18 +48,18 @@ const WelcomeStyles = styled.div`
             opacity: 1;
         }
     }
-    .divider {
+    /* .divider {
         display:inline-block;
-        position: relative;
+        position: relative; */
         /* background:blue; */
         /* box-shadow: var(--boxShadow); */
         /* transform: skew(var(--postTitleSkew)); */
-        width: 100%;
-        height: 50px;
+        /* width: 100%;
+        height: 50px; */
         /* span:nth-child(1), span:nth-child(2) {
             animation: fadeInAnimation ease 2s;
         } */
-        span:nth-child(1) {
+        /* span:nth-child(1) {
         mix-blend-mode: normal;
         display: inline-block;
         position: relative;
@@ -68,8 +68,8 @@ const WelcomeStyles = styled.div`
         transform: skewY(-1deg) translateY(1px);
         background: var(--navBoxBackgroundColor);
         
-    }
-    span:nth-child(2) {
+    } */
+    /* span:nth-child(2) {
         mix-blend-mode: normal;
         display: inline-block;
         position: relative;
@@ -79,9 +79,10 @@ const WelcomeStyles = styled.div`
         background: var(--navBoxBackgroundColor);
 
     }
-    }
+    } */
     //TO-DO work on setting the animations to start at different times
     .welcome-container {
+        animation: slideInAnimation ease 2s;
         height: 100vh;
         width: 100%;
         display: inline-block;

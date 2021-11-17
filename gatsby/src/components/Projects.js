@@ -20,6 +20,7 @@ const ProjectsContainer = styled.div`
     @media(max-width: 875px) {
         grid-template-columns: 1fr;
         max-width: 400px;
+    
         /* ${ProjectItem} {
             margin: 40px;
         } */
@@ -48,6 +49,10 @@ justify-content: center;
         font-style: italic;
         max-width: 250px;
         margin: 35px auto auto auto;
+    }
+    @media(max-width: 875px) {
+        margin-left: 25px;
+        margin-right: 25px;
     }
 `;
 
