@@ -7,7 +7,7 @@ import ViewOutsideContent from '../components/ViewOutsideContent';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 
-
+const StyledGatsbyImage = styled(GatsbyImage)``;
 const PostStyles = styled.div`
     text-align: center;
     p {
@@ -64,6 +64,10 @@ const PostStyles = styled.div`
         }
         margin-bottom: 25px;
     }
+    ${StyledGatsbyImage} {
+        /* display: none; */
+        max-width: 800px;
+    }
 `;
 
 export default function Template({ data }) {
@@ -87,7 +91,7 @@ export default function Template({ data }) {
                 </div>
                 
                 {post.frontmatter.previewImage ?
-                    <GatsbyImage 
+                    <StyledGatsbyImage 
                     image={post.frontmatter.previewImage.childImageSharp.gatsbyImageData}
                     alt={post.frontmatter.previewImageAlt}
                     />

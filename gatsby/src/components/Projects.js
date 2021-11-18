@@ -41,6 +41,12 @@ justify-content: center;
 }
 .projectPreviewImage{
     height: fit-content;
+    filter: blur(0);
+    border: 1px solid transparent;
+    :hover {
+        border: 1px solid #00000061;
+        filter: blur(1px);
+    }
 }
 .projectPreviewImage.gatsby-image-wrapper {
     border-radius: 0;
@@ -97,10 +103,14 @@ export default function Projects() {
                         return(
                             <ProjectItem>
                                 {project.node.frontmatter.previewImage ?
-                                <GatsbyImage className='projectPreviewImage'
-                                image={project.node.frontmatter.previewImage.childImageSharp.gatsbyImageData}
-                                alt={project.node.frontmatter.title}
-                                />
+                                <Link 
+                                key={project.node.id}
+                                to={project.node.frontmatter.path}>
+                                    <GatsbyImage className='projectPreviewImage'
+                                    image={project.node.frontmatter.previewImage.childImageSharp.gatsbyImageData}
+                                    alt={project.node.frontmatter.title}
+                                    />
+                                </Link>
                                 
                                 : ''
                             }
