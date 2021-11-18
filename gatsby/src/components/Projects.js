@@ -104,8 +104,6 @@ export default function Projects() {
                                 
                                 : ''
                             }
-                                
-
                                 <ViewOutsideContentStyles>
                                     <StyledLink className="title"
                                     key={project.node.id}

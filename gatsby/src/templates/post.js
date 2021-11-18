@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import BasicPageStyles from '../styles/BasicPageStyles';
 import styled from 'styled-components';
 import ViewOutsideContent from '../components/ViewOutsideContent';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 
 
@@ -85,6 +86,13 @@ export default function Template({ data }) {
                 
                 </div>
                 
+                {post.frontmatter.previewImage ?
+                    <GatsbyImage 
+                    image={post.frontmatter.previewImage.childImageSharp.gatsbyImageData}
+                    alt={post.frontmatter.previewImageAlt}
+                    />
+                    : ""
+                }
                 <div dangerouslySetInnerHTML={{__html: post.html}}/>
             </PostStyles>
         </BasicPageStyles>
@@ -96,12 +104,19 @@ export const postQuery = graphql`
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html
             frontmatter {
-                title
                 path
+                title
                 summary
+                project
                 url
                 repo
+                previewImageAlt
+                previewImage {
+                        childImageSharp {
+                            gatsbyImageData
+                        }
             }
         }      
     }
+}
 `;

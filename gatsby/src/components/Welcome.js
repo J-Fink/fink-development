@@ -48,38 +48,7 @@ const WelcomeStyles = styled.div`
             opacity: 1;
         }
     }
-    /* .divider {
-        display:inline-block;
-        position: relative; */
-        /* background:blue; */
-        /* box-shadow: var(--boxShadow); */
-        /* transform: skew(var(--postTitleSkew)); */
-        /* width: 100%;
-        height: 50px; */
-        /* span:nth-child(1), span:nth-child(2) {
-            animation: fadeInAnimation ease 2s;
-        } */
-        /* span:nth-child(1) {
-        mix-blend-mode: normal;
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        height: 40px;
-        transform: skewY(-1deg) translateY(1px);
-        background: var(--navBoxBackgroundColor);
-        
-    } */
-    /* span:nth-child(2) {
-        mix-blend-mode: normal;
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        height: 68px;
-        transform: translateY(-20px);
-        background: var(--navBoxBackgroundColor);
-
-    }
-    } */
+    
     //TO-DO work on setting the animations to start at different times
     .welcome-container {
         animation: slideInAnimation ease 2s;
@@ -105,21 +74,16 @@ const WelcomeStyles = styled.div`
         background: var(--welcomeBackgroundColor);
         color: var(--textColorHover);
         box-shadow: var(--boxShadow);
-        /* width: 68vw; */
+
         max-width: 800px;
 
-        /* padding-top: 15px;
-        padding-bottom: 15px;
-        padding-left: 15px;
-        right: 15px; */
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        /* margin-left: 15px; */
         margin-right: auto;
         margin-left: auto;
-        /* margin-bottom: 25px; */
+
         p {
             margin: 0 0 25px 0;
             max-width: 368px;
