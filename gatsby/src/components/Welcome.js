@@ -29,22 +29,13 @@ const WelcomeStyles = styled.div`
             height: 0;
             opacity: 0;
         }
+     
         75% {
+            height: 0;
             opacity: 0;
         }
         100% {
             height: 100;
-            opacity: 1;
-        }
-    }
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-        }
-        75% {
-            opacity: 0;
-        }
-        100% {
             opacity: 1;
         }
     }
