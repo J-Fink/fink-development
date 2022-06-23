@@ -56,7 +56,9 @@ const WelcomeStyles = styled.div`
         justify-content: center;
         height: 79vh;
 
-        
+        p {
+            font-size: 2.5rem;
+        }
         h1 {
             margin-bottom: 55px;
         }
@@ -165,8 +167,8 @@ export default function Welcome() {
                 <section className="welcome-section">
                     <h1>WELCOME!</h1>
                     <span className="flex-container">
-                        <p>Hello, my name is Joe and I'm glad you're here!<br/>
-                        I'm a husband, a dad, and a web developer. In 2019 I started intentionally spending time learning how to program and figure out this mystery that is <span className="emphasis">technology</span>. Learn more about my journey <Link to="/about">HERE</Link></p>
+                        <p>
+                        I'm Joe, you can learn more about me <Link to="/about">HERE</Link></p>
                         <StaticImage
                         imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
                         alt="Joe smiles a welcoming smile"

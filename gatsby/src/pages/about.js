@@ -22,7 +22,7 @@ export const AboutStyles = styled.div`
     --h1Top: -445px;
     p {
         overflow-wrap: anywhere;
-        max-width: 1200px;
+        max-width: 800px;
         text-align: left;
         padding: 0 50px;
         margin: auto auto 25px auto;
@@ -56,6 +56,9 @@ export const AboutStyles = styled.div`
       font-size: 9rem;
       margin: 45px auto 0 auto;
       line-height: normal;
+    }
+    h2 {
+        margin-top: 90px;
     }
     @media (max-width: 500px) {
         .flex-container {
@@ -94,7 +97,7 @@ export default function AboutPage() {
                     <span className="flex-container">
                         <p>
                             Hi, I'm Joe!<br />
-                            I'm a husband, father, and a self-taught web<br /> developer, from St. Paul, Minnesota.<br />
+                            I'm a facility management professional who is also a self-taught web<br /> developer, from St. Paul, Minnesota.<br />
                         </p>
                     <StaticImage
                         imgClassName="mobile-image" //this allows me to add border radius to the image directly, because when it was on the wrapper it was not showing up on mobile
@@ -110,12 +113,15 @@ export default function AboutPage() {
                     
                     
                     <p>
-                        I work for a nonprofit organization, so I wear many hats. Working well in a team environment has been an important part of my work, along with writing internal documentation for our workflow. In my free time I make websites, and like to use my new found skills to help nonprofit organizations.
+                        I've worked for different non-profits over the last decade where I've worn a few different hats (ever wonder who writes descriptions and takes photos for items for an online thrift store?)</p>
+                    <p>
+                        I have been interested in technology on and off for most of my life (I’m a millennial, what can I say), but it was in 2019 that I began to peek behind the mysterious curtain and realize there isn’t some magic with technology, people build it. The world is full of day virtual carpenters crafting the apps we all use daily.
+                    </p>
+                    <p>
+                        Since then I have done a deep dive learning how to create in this virtual space, and most recently have been using my skills to help non-profits get a presence on the web. I am continuously keep learning, lucky for me I've barely scratched the surface, you can check out my GitHub <a href="https://github.com/J-Fink" rel="noreferrer nofollow">here</a>.
                     </p>
                     
-                    <p>
-                        I started to learn how to program in August of 2019. There has been so much I have learned so far(and yet still so much more!), you can check out my GitHub <a href="https://github.com/J-Fink" rel="noreferrer nofollow">here</a>.
-                    </p>
+                    <h2>ALSO</h2>
                     <p>
                         I like to make food: bread baking, smoking (ribs, chicken, brisket, cheez-its, cheesecakes, if it's edible, it's liable to go in the smoker). In August of 2021 I picked up a new food. My kids love this one!
                     </p>
