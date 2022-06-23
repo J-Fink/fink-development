@@ -18,6 +18,7 @@ const TechItem = styled.div`
 
 export default function Technologies() {
     let technologiesArray = [
+        {name:'Notion'},
         {name:'Git'},
         {name:'GitHub'},
         {name:'VS Code'},

@@ -189,7 +189,8 @@ export default function Welcome() {
             </span>
             <section>
                 <h2>Skills and Technologies</h2>
-                <p>Troubleshooting and research (i.e. GOOGLING) are skills I use EVERYDAY. Tools I've been using include:
+                <p>Problem solving, learning new things, communicating</p>
+                <p>Tools & Tech I've been using:
                 </p>
                 <Technologies />    
             </section>
